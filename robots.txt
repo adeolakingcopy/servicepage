@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://brandiecreative.netlify.app/sitemap.xml
+Host: brandiecreative.netlify.app

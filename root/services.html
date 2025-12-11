@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Brandie Creative — Web Design, SEO, Digital Marketing & Motion Graphics Services</title>
+  <meta name="description" content="Brandie Creative provides Web Design, Website Development, SEO, Digital Marketing, Motion Graphics and Growth Strategy services. Technical SEO, Local SEO, on-page optimization, keyword research, and conversion-driven websites to increase organic traffic and rank higher on Google.">
+  <meta name="keywords" content="Brandie Creative, web design, SEO (Search Engine Optimization), digital marketing, website development, SEO expert, digital marketer, full-stack digital marketer, motion graphics, motion graphics designer, promo videos, growth strategy, content strategy, web developer, brand identity, creative director, technical SEO services, local SEO strategy, rank higher on Google, increase organic traffic, SEO campaign services, on-page optimization, keyword research and strategy, high-converting websites, conversion-driven websites, fast and modern websites, e-commerce website development, corporate website design, digital marketing strategy consultant, attract and convert customers online, content strategy and funnels, build strong online presence, helping businesses grow online">
+  <link rel="canonical" href="https://brandiecreative.netlify.app/services.html">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%23dc2626'>B</text></svg>">
+  <meta name="theme-color" content="#141414">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --bg-secondary: #f5f5f5;
+      --text: #141414;
+      --text-muted: #666666;
+      --primary: #b91c1c;
+      --primary-light: rgba(185, 28, 28, 0.1);
+      --border: #e5e5e5;
+      --card-bg: #fafafa;
+    }
+
+    .dark {
+      --bg: #141414;
+      --bg-secondary: #1a1a1a;
+      --text: #f5f5f5;
+      --text-muted: #a3a3a3;
+      --primary: #dc2626;
+      --primary-light: rgba(220, 38, 38, 0.15);
+      --border: #2a2a2a;
+      --card-bg: #1f1f1f;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+      padding-top:100px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 16px 0;
+      background: transparent;
+      transition: background-color 0.3s, backdrop-filter 0.3s;
+    }
+
+    header.scrolled {
+      background: var(--bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      background: rgba(var(--bg), 0.8);
+    }
+
+    .dark header.scrolled {
+      background: rgba(20, 20, 20, 0.9);
+    }
+
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Logo with glowing dot */
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      line-height: 20px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-dot {
+      width: 10px;
+      height: 10px;
+      background: #ef4444;
+      border-radius: 50%;
+      margin-left: 2px;
+      animation: glow-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes glow-pulse {
+      0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 8px 4px rgba(239, 68, 68, 0.8), 
+                    0 0 16px 8px rgba(239, 68, 68, 0.5), 
+                    0 0 24px 12px rgba(239, 68, 68, 0.3);
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.4;
+        box-shadow: 0 0 4px 2px rgba(239, 68, 68, 0.4), 
+                    0 0 8px 4px rgba(239, 68, 68, 0.2);
+        transform: scale(0.95);
+      }
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-alt {
+      background: var(--bg-secondary);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    main {
+      padding-top: 120px;
+      padding-bottom: 40px;
+    }
+
+    main h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    main > p {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+
+    main section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    main section h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 16px;
+    }
+
+    main section p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    main section ul {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    main section li {
+      padding: 12px 0;
+      padding-left: 24px;
+      position: relative;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    main section li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    main section li strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+      margin-top: 80px;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 1.125rem;
+      opacity: 0.9;
+      margin-bottom: 32px;
+    }
+
+    .cta-section .btn-primary {
+      background: white;
+      color: var(--primary);
+    }
+
+    .cta-section .btn-primary:hover {
+      background: rgba(255,255,255,0.9);
+    }
+
+    /* Footer */
+    footer {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    @media (max-width: 600px) {
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+
+    footer p {
+      margin-top: 12px;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 600px) {
+      footer p { text-align: center; }
+    }
+
+    /* Scroll animations */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding-top: 80px;
+      }
+
+      main h1 {
+        font-size: 2rem;
+      }
+
+      main > p {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <a href="/" class="logo" title="Brandie Creative - Home">Brandie Creative<span class="logo-dot"></span></a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="/services.html" aria-current="page">Services</a>
+        <a href="/chatbot.html">Chatbot</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container animate-on-scroll">
+    <h1>Brandie Creative — Web Design, SEO & Digital Marketing Services</h1>
+    <p>Brandie Creative offers a full suite of services to help businesses attract, convert and grow online. Our expertise spans web design, website development, SEO optimization, digital marketing strategy, and motion graphics.</p>
+
+    <section id="services-overview">
+      <h2>Our Core Services</h2>
+      <ul>
+        <li><strong>Web Design & Website Development</strong> — High-converting, fast and modern websites tailored to your brand. Full-stack development, e-commerce, and corporate site solutions.</li>
+        <li><strong>SEO (Search Engine Optimization)</strong> — Technical SEO services, on-page optimization, keyword research and strategy to increase organic traffic and rank higher on Google.</li>
+        <li><strong>Local SEO Strategy</strong> — Local citation management and optimization to improve visibility in local search results and attract nearby customers.</li>
+        <li><strong>Digital Marketing & Growth Strategy</strong> — Content strategy, funnels, audience growth campaigns and conversion optimization to attract and convert customers online.</li>
+        <li><strong>Motion Graphics & Promo Videos</strong> — Eye-catching motion design and promotional videos to boost engagement and conversions on social media.</li>
+      </ul>
+
+      <h3>Specialized SEO Solutions</h3>
+      <p>Our comprehensive SEO campaign services include technical audits, schema markup implementation, page speed optimization, content strategy, link building, and measurable performance reporting. We help you rank higher on Google and increase organic traffic.</p>
+
+      <h3>Conversion & Growth Focused</h3>
+      <p>We build conversion-driven websites with clear user funnels, fast load times, and persuasive messaging to deliver measurable business results. Our approach combines brand identity, technical expertise, and growth strategy.</p>
+
+      <h3>Why Choose Brandie Creative</h3>
+      <p>Brandie Creative is a Full-Stack Digital Marketer and Creative Director delivering integrated design, development, and marketing solutions. We understand that successful businesses need more than just a website—they need visibility, conversion optimization, and strategic growth. We blend brand strategy, technical SEO, and creative direction to help you build a strong online presence and dominate your market.</p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2>Ready to Grow Your Business?</h2>
+      <p>Contact Brandie Creative to discuss a custom strategy that drives traffic, engagement, and conversions.</p>
+      <a href="/#contact" class="btn btn-primary">Work With Me</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <a href="/" class="logo" title="Brandie Creative - Home">Brandie Creative<span class="logo-dot"></span></a>
+          <p>brandiecreative@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // Dark mode
+    try {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else if (saved === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (e) {}
+  </script>
+</body>
+</html>
