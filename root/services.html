@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Brandie Creative — Web Design, SEO, Digital Marketing & Motion Graphics Services</title>
-  <meta name="description" content="Brandie Creative provides Web Design, Website Development, SEO, Digital Marketing, Motion Graphics and Growth Strategy services. Technical SEO, Local SEO, on-page optimization, keyword research, and conversion-driven websites to increase organic traffic and rank higher on Google.">
-  <meta name="keywords" content="Brandie Creative, web design, SEO (Search Engine Optimization), digital marketing, website development, SEO expert, digital marketer, full-stack digital marketer, motion graphics, motion graphics designer, promo videos, growth strategy, content strategy, web developer, brand identity, creative director, technical SEO services, local SEO strategy, rank higher on Google, increase organic traffic, SEO campaign services, on-page optimization, keyword research and strategy, high-converting websites, conversion-driven websites, fast and modern websites, e-commerce website development, corporate website design, digital marketing strategy consultant, attract and convert customers online, content strategy and funnels, build strong online presence, helping businesses grow online">
+  <title>Brandie Creative — Minimalist Websites & Motion That Convert</title>
+  <meta name="description" content="Brandie Creative builds minimalist websites, motion graphics, and messaging that convert visitors into clients. Strategic design, fast builds, and clear copy for coaches, creators, and service professionals.">
+  <meta name="keywords" content="Brandie Creative, web design, website development, motion graphics, promo videos, messaging, brand design, creative director">
   <link rel="canonical" href="https://brandiecreative.netlify.app/services.html">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,6 +77,17 @@
       background: var(--bg);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
+      /* Respect users' reduced motion preference */
+      @media (prefers-reduced-motion: reduce) {
+        .logo-dot,
+        .animate-on-scroll,
+        .service-card,
+        .profile-card,
+        .hero {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
       background: rgba(var(--bg), 0.8);
     }
 
@@ -386,36 +397,32 @@
   <!-- Main Content -->
   <main class="container animate-on-scroll">
     <div class="hero">
-    <h1>Brandie Creative — Web Design, SEO & Digital Marketing Services</h1>
-    <p>Brandie Creative offers a full suite of services to help businesses attract, convert and grow online. Our expertise spans web design, website development, SEO optimization, digital marketing strategy, and motion graphics.</p>
+    <h1>Minimalist websites that turn visitors into paying clients.</h1>
+    <p>Design • Motion • Messaging — for coaches, creators, and service pros</p>
+    <p class="hero-trust" style="margin-top:12px;color:var(--text-muted);">Trusted by coaches & creators • Fast delivery • Clear messaging</p>
     </div>
     
 
     <section id="services-overview">
       <h2>Our Core Services</h2>
       <ul>
-        <li><strong>Web Design & Website Development</strong> — High-converting, fast and modern websites tailored to your brand. Full-stack development, e-commerce, and corporate site solutions.</li>
-        <li><strong>SEO (Search Engine Optimization)</strong> — Technical SEO services, on-page optimization, keyword research and strategy to increase organic traffic and rank higher on Google.</li>
-        <li><strong>Local SEO Strategy</strong> — Local citation management and optimization to improve visibility in local search results and attract nearby customers.</li>
-        <li><strong>Digital Marketing & Growth Strategy</strong> — Content strategy, funnels, audience growth campaigns and conversion optimization to attract and convert customers online.</li>
-        <li><strong>Motion Graphics & Promo Videos</strong> — Eye-catching motion design and promotional videos to boost engagement and conversions on social media.</li>
+        <li><strong>Minimalist Website Design</strong> — Strategic homepages and landing pages that increase leads and bookings with fast, performance-first builds.</li>
+        <li><strong>Motion Graphics & Promo Videos</strong> — Short, share-ready visuals that boost engagement and clarify your offer.</li>
+        <li><strong>Messaging & Copy</strong> — Benefit-led headlines and service pages that make your offer clear and convert visitors into clients.</li>
       </ul>
 
-      <h3>Specialized SEO Solutions</h3>
-      <p>Our comprehensive SEO campaign services include technical audits, schema markup implementation, page speed optimization, content strategy, link building, and measurable performance reporting. We help you rank higher on Google and increase organic traffic.</p>
-
-      <h3>Conversion & Growth Focused</h3>
-      <p>We build conversion-driven websites with clear user funnels, fast load times, and persuasive messaging to deliver measurable business results. Our approach combines brand identity, technical expertise, and growth strategy.</p>
+      <h3>Conversion & Performance Focused</h3>
+      <p>We build conversion-driven websites with clear user funnels, fast load times, and persuasive messaging to deliver measurable results. Our approach blends brand identity, high-performance builds, and motion to help your offer stand out.</p>
 
       <h3>Why Choose Brandie Creative</h3>
-      <p>Brandie Creative is a Full-Stack Digital Marketer and Creative Director delivering integrated design, development, and marketing solutions. We understand that successful businesses need more than just a website—they need visibility, conversion optimization, and strategic growth. We blend brand strategy, technical SEO, and creative direction to help you build a strong online presence and dominate your market.</p>
+      <p>Brandie Creative is a web developer and motion designer delivering integrated design, development, and messaging. We focus on beautiful, usable websites and motion content that support your business goals.</p>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
-      <h2>Ready to Grow Your Business?</h2>
+      <h2>Ready to grow your business?</h2>
       <p>Contact Brandie Creative to discuss a custom strategy that drives traffic, engagement, and conversions.</p>
-      <a href="https://wa.me/2348112788128" class="btn btn-primary" target="_blank">Work With Me</a>
+      <a href="mailto:brandiecreative@gmail.com?subject=Project%20Inquiry" class="btn btn-primary" target="_blank">Start Your Project</a>
     </section>
   </main>
 

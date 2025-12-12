@@ -615,6 +615,19 @@
         align-items: center;
       }
     }
+    /* Respect users' reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      .hero-decor,
+      .marquee-content,
+      .service-icon,
+      .service-card,
+      .hero-image-wrapper,
+      .hero-image,
+      .animate-on-scroll {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -680,8 +693,8 @@
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
           </div>
-          <h3>Digital Marketing</h3>
-          <p>Data-driven strategies that amplify brand voice and drive conversion. SEO, SEM, and Social Media mastery.</p>
+          <h3>Brand Strategy</h3>
+          <p>Brand positioning and conversion-focused messaging that amplify your voice and drive client action.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
@@ -732,7 +745,7 @@
           <span>Figma</span>
           <span>React</span>
           <span>Next.js</span>
-          <span>SEO</span>
+          <span>Animation</span>
           <span>Google Ads</span>
           <span>Analytics</span>
         </div>
