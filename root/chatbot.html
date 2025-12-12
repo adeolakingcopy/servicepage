@@ -382,6 +382,14 @@
   </style>
 </head>
 <body>
+  <style>
+    :root { --focus-outline: 3px solid rgba(185,28,28,0.95); }
+    a:focus-visible, button:focus-visible, .btn:focus-visible, #chatInput:focus-visible {
+      outline: var(--focus-outline);
+      outline-offset: 3px;
+      border-radius: 8px;
+    }
+  </style>
   <script>
     (function() {
       try {
@@ -470,7 +478,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2024 Brandie Creative. <a href="/">Back to Portfolio</a></p>
+    <p>© 2025 Brandie Creative. <a href="/">Back to Portfolio</a></p>
   </footer>
 
   <script>
@@ -706,27 +714,48 @@
 
       showTypingIndicator();
 
-      setTimeout(() => {
-        removeTypingIndicator();
-        
-        const answer = findAnswer(userMessage);
-        
-        if (answer) {
-          addMessage(answer, false);
+      // first try the local KB
+      const localAnswer = findAnswer(userMessage);
 
-          // store bot turn
-          convoMemory.bot.push(answer);
+      if (localAnswer) {
+        // quick local reply
+        setTimeout(() => {
+          removeTypingIndicator();
+          addMessage(localAnswer, false);
+          convoMemory.bot.push(localAnswer);
           if (convoMemory.bot.length > convoMemory.maxTurns) convoMemory.bot.shift();
+        }, 400);
+        return;
+      }
 
-        } else {
+      // if no local answer, attempt AI endpoint (/api/chat)
+      (async () => {
+        try {
+          const resp = await fetch('/.netlify/functions/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: userMessage, history: [...convoMemory.user.map(u=>({role:'user',content:u})), ...convoMemory.bot.map(b=>({role:'assistant',content:b}))] })
+          });
+
+          if (!resp.ok) throw new Error('AI endpoint error');
+          const data = await resp.json();
+          removeTypingIndicator();
+          if (data && data.reply) {
+            addMessage(data.reply, false);
+            convoMemory.bot.push(data.reply);
+            if (convoMemory.bot.length > convoMemory.maxTurns) convoMemory.bot.shift();
+          } else {
+            throw new Error('No reply from AI');
+          }
+        } catch (err) {
+          // fallback to friendly default when AI fails
+          removeTypingIndicator();
           const defaultResponse = `I'm not sure about that specific question. However, I'd love to help! 🚀\n\nFeel free to ask about my services, pricing, or processes. Or chat directly with me on WhatsApp for a personalized answer!`;
           addMessage(defaultResponse, false);
-
-          // store fallback response
           convoMemory.bot.push(defaultResponse);
           if (convoMemory.bot.length > convoMemory.maxTurns) convoMemory.bot.shift();
         }
-      }, 800);
+      })();
     }
 
     // Event listeners

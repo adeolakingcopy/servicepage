@@ -1399,6 +1399,14 @@
   </style>
 </head>
 <body>
+  <style>
+    :root { --focus-outline: 3px solid rgba(185,28,28,0.95); }
+    a:focus-visible, button:focus-visible, .btn:focus-visible {
+      outline: var(--focus-outline);
+      outline-offset: 3px;
+      border-radius: 8px;
+    }
+  </style>
   <!-- Header -->
   <header id="header">
     <div class="container">
@@ -1455,7 +1463,10 @@
         </div>
         <div class="hero-image">
           <div class="profile-card">
-            <img src="./brandie-creative.png" alt="Brandie Creative - Full-Stack Digital Marketer, Web Developer & Creative Director">
+            <picture>
+              <source srcset="./brandie-creative.webp" type="image/webp">
+              <img src="./brandie-creative.png" alt="Brandie Creative - Web Developer & Motion Graphics Designer" loading="lazy" decoding="async" width="400" height="400">
+            </picture>
             <div class="profile-caption">
               <div class="name">Brandie Creative</div>
               <div class="role">Creative Director</div>
@@ -1643,7 +1654,7 @@
           </ul>
 
           <p class="why-tagline">
-            I'm not just a designer — I'm the person you call when you want your business to grow online.
+            I'm not just a Web/Motion graphics designer — I'm the person you call when you want your business to grow online.
           </p>
         </div>
       </div>
@@ -1755,7 +1766,7 @@
             <li>Mobile-first design</li>
             <li>Performance & speed optimization</li>
           </ul>
-          <a href="#contact" class="btn btn-primary" style="margin-top:12px;display:inline-block;">Get Started</a>
+          <a href="#contact" class="btn btn-primary" style="margin-top:12px;display:inline-block;">Start Your Project</a>
         </div>
 
         <div class="service-card animate-on-scroll">
@@ -1767,7 +1778,7 @@
             <li>Messaging + copywriting</li>
             <li>Motion graphics for hero or promos</li>
           </ul>
-          <a href="#contact" class="btn btn-primary" style="margin-top:12px;display:inline-block;">Schedule a Call</a>
+          <a href="#contact" class="btn btn-primary" style="margin-top:12px;display:inline-block;">Start Your Project</a>
         </div>
 
         <div class="service-card animate-on-scroll">
@@ -1779,7 +1790,7 @@
             <li>Custom animations & videos</li>
             <li>Post-launch optimization</li>
           </ul>
-          <a href="#contact" class="btn btn-primary" style="margin-top:12px;display:inline-block;">Get a Proposal</a>
+          <a href="#contact" class="btn btn-primary" style="margin-top:12px;display:inline-block;">Start Your Project</a>
         </div>
         </div>
       </div>

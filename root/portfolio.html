@@ -16,19 +16,28 @@
   </style>
 </head>
 <body>
-      /* Respect users' reduced motion preference */
-      @media (prefers-reduced-motion: reduce) {
-        .hero-decor,
-        .marquee-content,
-        .service-icon,
-        .service-card,
-        .hero-image-wrapper,
-        .hero-image,
-        .animate-on-scroll {
-          animation: none !important;
-          transition: none !important;
-        }
+  <div class="container">
+  <style>
+    :root { --focus-outline: 3px solid rgba(185,28,28,0.95); }
+    a:focus-visible, button:focus-visible, .btn:focus-visible {
+      outline: var(--focus-outline);
+      outline-offset: 3px;
+      border-radius: 8px;
+    }
+  </style>
+    /* Respect users' reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      .hero-decor,
+      .marquee-content,
+      .service-icon,
+      .service-card,
+      .hero-image-wrapper,
+      .hero-image,
+      .animate-on-scroll {
+        animation: none !important;
+        transition: none !important;
       }
+    }
   <div class="container">
     <a href="/">← Home</a>
     <h1>Selected Work</h1>
