@@ -34,8 +34,8 @@
       --black: #0A0B0E;
       --deep: #0d0e13;
       --mid: #13141b;
-      --red: #e8001c;
-      --red-d: #b5001b;
+      --red: #7C0000;
+      --red-d: #7C0000;
       --red-glow: rgba(232, 0, 28, .35);
       --white: #f2ede6;
       --grey: rgba(242, 237, 230, .5);
@@ -84,21 +84,23 @@
       overflow-x: hidden;
       cursor: none
     }
-body::before {
-    content: '';
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .5;
-    background: url(./noise.webp);
-    background-repeat: repeat;
-    background-size: 257px auto;
-    pointer-events: none;
-    z-index: 999;
-}
+
+    body::before {
+      content: '';
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: .5;
+      background: url(./noise.webp);
+      background-repeat: repeat;
+      background-size: 257px auto;
+      pointer-events: none;
+      z-index: 999;
+    }
+
     /* Page container: consistent max-width and horizontal padding */
     .container {
       max-width: 1280px;
@@ -700,37 +702,41 @@ body::before {
       animation: dotPulse 2.5s ease-in-out infinite
     }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    line-height: 20px;
-    text-decoration: none;
-    color: inherit;
-} 
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      line-height: 20px;
+      text-decoration: none;
+      color: inherit;
+    }
 
-.logo-dot {
-    width: 10px;
-    height: 10px;
-    background: #ef4444;
-    border-radius: 50%;
-    margin-left: 2px;
-    animation: glow-pulse 2s ease-in-out infinite;
-}
+    .logo-dot {
+      width: 10px;
+      height: 10px;
+      background: #ef4444;
+      border-radius: 50%;
+      margin-left: 2px;
+      animation: glow-pulse 2s ease-in-out infinite;
+    }
+
     @keyframes glow-pulse {
-      0%, 100% {
+
+      0%,
+      100% {
         opacity: 1;
-        box-shadow: 0 0 8px 4px rgba(239, 68, 68, 0.8), 
-                    0 0 16px 8px rgba(239, 68, 68, 0.5), 
-                    0 0 24px 12px rgba(239, 68, 68, 0.3);
+        box-shadow: 0 0 8px 4px rgba(239, 68, 68, 0.8),
+          0 0 16px 8px rgba(239, 68, 68, 0.5),
+          0 0 24px 12px rgba(239, 68, 68, 0.3);
         transform: scale(1);
       }
+
       50% {
         opacity: 0.4;
-        box-shadow: 0 0 4px 2px rgba(239, 68, 68, 0.4), 
-                    0 0 8px 4px rgba(239, 68, 68, 0.2);
+        box-shadow: 0 0 4px 2px rgba(239, 68, 68, 0.4),
+          0 0 8px 4px rgba(239, 68, 68, 0.2);
         transform: scale(0.95);
       }
     }
@@ -866,7 +872,7 @@ body::before {
       flex-shrink: 0;
       background: var(--red);
       color: #fff;
-      box-shadow: 0 0 24px rgba(0,0,0,.08);
+      box-shadow: 0 0 24px rgba(0, 0, 0, .08);
       margin-left: -18px;
     }
 
@@ -894,7 +900,7 @@ body::before {
     .nav-btn-ghost .morph-icon {
       background: var(--glass-bg);
       color: #fff;
-      border: 1px solid rgba(255,255,255,.08);
+      border: 1px solid rgba(255, 255, 255, .08);
     }
 
     .btn-wa .morph-text,
@@ -1079,7 +1085,7 @@ body::before {
       flex-shrink: 0;
       background: var(--red);
       color: #fff;
-      box-shadow: 0 0 24px rgba(0,0,0,.08);
+      box-shadow: 0 0 24px rgba(0, 0, 0, .08);
       margin-left: -15px;
     }
 
@@ -1107,7 +1113,7 @@ body::before {
     .nav-btn-ghost .morph-icon {
       background: var(--glass-bg);
       color: #fff;
-      border: 1px solid rgba(255,255,255,.08);
+      border: 1px solid rgba(255, 255, 255, .08);
     }
 
     .btn-ghost .morph-icon,
@@ -2450,7 +2456,7 @@ body::before {
     .testi-track {
       display: flex;
       gap: 1.5rem;
-      transition: transform .45s cubic-bezier(.22,.69,.36,1);
+      transition: transform .45s cubic-bezier(.22, .69, .36, 1);
       will-change: transform;
     }
 
@@ -3113,6 +3119,45 @@ body::before {
       gap: .45rem
     }
 
+    @media (max-width: 768px) {
+      #contact {
+        padding: 4rem 1rem;
+      }
+
+      .contact-inner {
+        gap: 2rem;
+      }
+
+      .contact-book,
+      .contact-form {
+        padding: 1.5rem;
+      }
+
+      .c-item {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      #contact {
+        padding: 3rem 0.8rem;
+      }
+
+      .container {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+      }
+
+      .contact-book,
+      .contact-form {
+        padding: 1.2rem;
+      }
+
+      .c-item {
+        padding: .9rem;
+      }
+    }
+
     .form-group label {
       font-size: .6rem;
       font-weight: 700;
@@ -3750,7 +3795,7 @@ body::before {
 
       nav,
       nav.scrolled {
-        padding: 1.2rem 1.8rem
+        padding: 1rem 1rem
       }
 
       .nav-links,
@@ -3782,8 +3827,8 @@ body::before {
       #about,
       #logos,
       #cta {
-        padding-left: 1.8rem;
-        padding-right: 1.8rem
+        padding-left: 1rem;
+        padding-right: 1rem
       }
 
       .hero-h1 {
@@ -3888,6 +3933,47 @@ body::before {
       .stats-inner {
         grid-template-columns: 1fr 1fr
       }
+
+      nav,
+      nav.scrolled {
+        padding: 1rem 0.8rem
+      }
+
+      #hero,
+      #services,
+      #portfolio,
+      .port-inner,
+      #who,
+      .who-inner,
+      #process,
+      .proc-inner,
+      #faq,
+      .faq-inner,
+      #testimonials,
+      #contact,
+      .contact-inner,
+      footer,
+      .stats-strip,
+      .marquee-wrap,
+      #about,
+      #logos,
+      #cta {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem
+      }
+
+      #contact {
+        padding: 3rem 0.8rem;
+      }
+
+      .contact-book,
+      .contact-form {
+        padding: 1.2rem;
+      }
+
+      .c-item {
+        padding: .9rem;
+      }
     }
   </style>
 </head>
@@ -3954,8 +4040,8 @@ body::before {
   <!-- NAV -->
   <nav id="nav">
     <a href="/" class="logo" title="Brandie Creative - Home">Brandie<br>Creative
-        <span class="logo-dot"></span>
-      </a>
+      <span class="logo-dot"></span>
+    </a>
     <ul class="nav-links">
       <li><a href="#services" data-sec="services">Services</a></li>
       <li><a href="#portfolio" data-sec="portfolio">Work</a></li>
@@ -3964,7 +4050,8 @@ body::before {
       <li><a href="#contact" data-sec="contact">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <a href="https://calendly.com/brandiecreative" target="_blank" class="nav-btn-ghost morph-btn"><span class="morph-text">Book a Call</span></a>
+      <a href="https://calendly.com/brandiecreative" target="_blank" class="nav-btn-ghost morph-btn"><span
+          class="morph-text">Book a Call</span></a>
       <a href="#contact" class="nav-btn morph-btn"><span class="morph-text">Start a Project</span></a>
       <button class="hamburger" id="ham" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -3997,7 +4084,8 @@ body::before {
           </p>
           <div class="hero-buttons">
             <a href="#contact" class="nav-btn-ghost morph-btn"><span class="morph-text">Explore Services</span></a>
-            <a href="#services" class="nav-btn morph-btn"><span class="morph-text">Book a Strategy Call</span><span class="morph-icon" aria-hidden="true">↗</span></a>
+            <a href="#services" class="nav-btn morph-btn"><span class="morph-text">Book a Strategy Call</span><span
+                class="morph-icon" aria-hidden="true">↗</span></a>
           </div>
         </div>
         <div class="hero-image">
@@ -4089,7 +4177,7 @@ body::before {
       <div class="port-grid">
         <div class="port-card reveal">
           <div class="port-visual">
-            <img src="./Macbook-Air-127.0.0.1.png" alt="Mavenmint Academy website" loading="lazy" />
+            <img src="./Macbook-Air-join.mavenmint.io (1).webp" alt="Mavenmint Academy website" loading="lazy" />
           </div>
           <div class="port-overlay"></div>
           <div class="port-info">
@@ -4373,7 +4461,8 @@ body::before {
             <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
               data-lucide="star"></i>
           </div>
-          <p class="testi-quote">The website Brandie delivered was clean, fast and immediately professional. Exactly what
+          <p class="testi-quote">The website Brandie delivered was clean, fast and immediately professional. Exactly
+            what
             SOQ Legal needed to establish credibility online.</p>
           <div class="testi-author-row">
             <div class="testi-avatar">SL</div>
@@ -4388,7 +4477,8 @@ body::before {
             <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
               data-lucide="star"></i>
           </div>
-          <p class="testi-quote">Working with Brandie on the Mavenmint Academy site was seamless. The design communicates
+          <p class="testi-quote">Working with Brandie on the Mavenmint Academy site was seamless. The design
+            communicates
             our offer clearly and the build quality is excellent.</p>
           <div class="testi-author-row">
             <div class="testi-avatar">MM</div>
@@ -4458,13 +4548,15 @@ body::before {
       </div>
 
       <div class="cta-buttons reveal d3">
-        <a href="https://calendly.com/brandiecreative" target="_blank" class="btn-red morph-btn"><span class="morph-text">Book a Free Call</span><span class="morph-icon" aria-hidden="true">↗</span></a>
+        <a href="https://calendly.com/brandiecreative" target="_blank" class="btn-red morph-btn"><span
+            class="morph-text">Book a Free Call</span><span class="morph-icon" aria-hidden="true">↗</span></a>
         <a href="#contact" class="btn-ghost morph-btn"><span class="morph-text">Start Your Project</span></a>
       </div>
 
       <div style="margin-top:1rem;color:rgba(242,237,230,.18);font-size:.78rem">Prefer messaging? <a
-          href="https://api.whatsapp.com/send/?phone=%2B2348112788128&text=Hello%2C+%2ABrandie%20Creative%2A+I+am+Coming+From+Your+Website%2C+I+Need+A+Website.+&type=phone_number&app_absent=0" style="color:var(--red);text-decoration:none">WhatsApp</a> or <a
-          href="mailto:brandiecreative@gmail.com" style="color:var(--red);text-decoration:none">email</a>.</div>
+          href="https://api.whatsapp.com/send/?phone=%2B2348112788128&text=Hello%2C+%2ABrandie%20Creative%2A+I+am+Coming+From+Your+Website%2C+I+Need+A+Website.+&type=phone_number&app_absent=0"
+          style="color:var(--red);text-decoration:none">WhatsApp</a> or <a href="mailto:brandiecreative@gmail.com"
+          style="color:var(--red);text-decoration:none">email</a>.</div>
     </div>
   </section>
 
@@ -4487,7 +4579,8 @@ body::before {
         <div class="sec-label reveal">The Person Behind It</div>
         <h2 class="sec-title reveal d1">Marketing with<br>Meaning.</h2>
         <p class="about-intro reveal d2">
-          Hi, I'm <strong>Brandie Creative</strong> currentrly building a digital marketing agency focused on growth, conversion, and
+          Hi, I'm <strong>Brandie Creative</strong> currentrly building a digital marketing agency focused on growth,
+          conversion, and
           memorable campaigns. We exist to help ambitious founders and brands turn attention into real business results.
         </p>
         <p class="about-intro reveal d2" style="margin-top:-.6rem">
@@ -4506,7 +4599,9 @@ body::before {
         </div>
         <div class="about-sig reveal d3">Brandie Creative — Available Worldwide</div>
         <div class="hero-actions reveal d3" style="margin-top:2rem">
-          <a href="https://calendly.com/brandiecreative" target="_blank" class="btn-red morph-btn"><span class="morph-text">Book a Free Call</span><span class="morph-icon"><i data-lucide="calendar"></i></span></a>
+          <a href="https://calendly.com/brandiecreative" target="_blank" class="btn-red morph-btn"><span
+              class="morph-text">Book a Free Call</span><span class="morph-icon"><i
+                data-lucide="calendar"></i></span></a>
           <a href="#contact" class="btn-ghost morph-btn"><span class="morph-text">Get in Touch</span></a>
         </div>
       </div>
@@ -4541,7 +4636,9 @@ body::before {
             <div class="c-icon"><i data-lucide="message-circle"></i></div>
             <div>
               <div class="c-label">WhatsApp</div>
-              <div class="c-val"><a href="https://api.whatsapp.com/send/?phone=%2B2348112788128&text=Hello%2C+%2ABrandie%20Creative%2A+I+am+Coming+From+Your+Website%2C+I+Need+A+Website.+&type=phone_number&app_absent=0" target="_blank">+234 811 278 8128</a></div>
+              <div class="c-val"><a
+                  href="https://api.whatsapp.com/send/?phone=%2B2348112788128&text=Hello%2C+%2ABrandie%20Creative%2A+I+am+Coming+From+Your+Website%2C+I+Need+A+Website.+&type=phone_number&app_absent=0"
+                  target="_blank">+234 811 278 8128</a></div>
             </div>
           </div>
           <div class="c-item reveal d3">
@@ -4563,7 +4660,9 @@ body::before {
           <div class="contact-book-label"><i data-lucide="calendar"></i>Prefer a quick chat?</div>
           <p class="contact-book-text">Book a free 20-minute discovery call. We'll talk through your goals and see if
             we're a good fit — no pressure, no pitch.</p>
-          <a href="https://calendly.com/brandiecreative" target="_blank" class="btn-red morph-btn"><span class="morph-text">Book a Free Call</span><span class="morph-icon"><i data-lucide="calendar"></i></span></a>
+          <a href="https://calendly.com/brandiecreative" target="_blank" class="btn-red morph-btn"><span
+              class="morph-text">Book a Free Call</span><span class="morph-icon"><i
+                data-lucide="calendar"></i></span></a>
         </div>
       </div>
       <div>
