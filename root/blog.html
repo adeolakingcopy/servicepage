@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0F0709">
+<title>Field Notes — Brandie Creative Blog</title>
+<meta name="description" content="Ideas on conversion, motion design, SEO and growth from the Brandie Creative team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red: #E8001C;
+    --coral: #F34025;
+    --bg: #0F0709;
+    --surface: #180D0F;
+    --surface-hover: #201113;
+    --line: #2E191C;
+    --ink: #FEFBFC;
+    --muted: #A08688;
+    --tint: #FBE9EB;
+    --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --container: 1180px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background:
+      radial-gradient(700px 500px at 85% -5%, rgba(232,0,28,0.16), transparent 60%),
+      radial-gradient(500px 400px at 0% 10%, rgba(232,0,28,0.08), transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--container); margin:0 auto; padding:0 32px; position:relative; z-index:1;}
+  ::selection{ background:var(--red); color:#fff; }
+
+  /* Nav */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(15,7,9,0.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; padding:18px 32px;}
+  .logo{font-family:var(--font-display); font-weight:700; font-size:1.15rem; letter-spacing:-0.01em;}
+  .logo em{font-style:normal; color:var(--red);}
+  .nav-links{display:flex; gap:32px; align-items:center;}
+  .nav-links a{font-size:0.92rem; color:var(--muted); transition:color .2s;}
+  .nav-links a:hover, .nav-links a.active{color:var(--ink);}
+  .nav-cta{
+    background:var(--red); color:#fff; padding:10px 20px; border-radius:100px;
+    font-size:0.88rem; font-weight:600; transition:background .2s, transform .2s;
+  }
+  .nav-cta:hover{background:var(--coral); transform:translateY(-1px);}
+  .nav-toggle{display:none; background:none; border:none; color:var(--ink); font-size:1.4rem; cursor:pointer;}
+
+  /* Hero */
+  .hero{padding:88px 0 64px; position:relative;}
+  .eyebrow{
+    font-family:var(--font-mono); font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--red); display:flex; align-items:center; gap:10px; margin-bottom:22px;
+  }
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--red);}
+  .hero h1{
+    font-family:var(--font-display); font-weight:700; letter-spacing:-0.02em;
+    font-size:clamp(2.4rem, 5.6vw, 4.4rem); line-height:1.02; max-width:14ch;
+  }
+  .hero-sub{
+    margin-top:22px; color:var(--muted); font-size:1.1rem; max-width:46ch; line-height:1.6;
+  }
+
+  /* Featured post */
+  .featured{
+    margin-top:56px; display:grid; grid-template-columns:1.1fr 1fr; gap:0;
+    background:var(--surface); border:1px solid var(--line); border-radius:20px; overflow:hidden;
+    position:relative;
+  }
+  .featured-media{position:relative; min-height:340px; background:#1A0F11 url('') center/cover;}
+  .featured-media img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0;}
+  .featured-media::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(0deg, rgba(15,7,9,0.55), transparent 40%);
+  }
+  .featured-body{padding:44px 48px; display:flex; flex-direction:column; justify-content:center;}
+  .tag{
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--red); border:1px solid rgba(232,0,28,0.4); background:rgba(232,0,28,0.08);
+    padding:5px 12px; border-radius:100px; width:fit-content; margin-bottom:18px;
+  }
+  .featured-body h2{
+    font-family:var(--font-display); font-weight:700; font-size:clamp(1.5rem,2.4vw,2rem);
+    line-height:1.14; letter-spacing:-0.01em; margin-bottom:14px;
+  }
+  .featured-body p{color:var(--muted); font-size:0.98rem; line-height:1.65; margin-bottom:22px;}
+  .meta-row{
+    display:flex; align-items:center; gap:16px; font-family:var(--font-mono);
+    font-size:0.78rem; color:var(--muted);
+  }
+  .meta-row .dot{width:3px; height:3px; border-radius:50%; background:var(--muted);}
+  .metric-chip{
+    display:flex; align-items:center; gap:10px; margin-top:24px; padding:12px 16px;
+    background:rgba(232,0,28,0.06); border:1px solid var(--line); border-radius:12px; width:fit-content;
+  }
+  .metric-chip .val{font-family:var(--font-display); font-weight:700; color:var(--red); font-size:1.3rem;}
+  .metric-chip .lbl{font-family:var(--font-mono); font-size:0.72rem; color:var(--muted); text-transform:uppercase;}
+  .spark{display:flex; align-items:flex-end; gap:2px; height:22px; margin-left:6px;}
+  .spark i{width:3px; background:var(--red); border-radius:1px; opacity:0.85;}
+
+  /* Filters */
+  .filters{
+    margin-top:72px; display:flex; gap:10px; flex-wrap:wrap;
+    padding-bottom:28px; border-bottom:1px solid var(--line);
+  }
+  .filter-btn{
+    font-family:var(--font-mono); font-size:0.8rem; padding:9px 16px; border-radius:100px;
+    border:1px solid var(--line); color:var(--muted); background:transparent; cursor:pointer;
+    transition:all .2s;
+  }
+  .filter-btn:hover{color:var(--ink); border-color:var(--muted);}
+  .filter-btn.active{background:var(--red); border-color:var(--red); color:#fff;}
+
+  /* Grid */
+  .grid{
+    margin-top:40px; display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; padding-bottom:100px;
+  }
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px; overflow:hidden;
+    display:flex; flex-direction:column; transition:transform .25s, border-color .25s, box-shadow .25s;
+  }
+  .card:hover{
+    transform:translateY(-4px); border-color:rgba(232,0,28,0.35);
+    box-shadow:0 20px 40px -20px rgba(232,0,28,0.25);
+  }
+  .card-media{height:170px; background:#1A0F11; position:relative; overflow:hidden;}
+  .card-media img{width:100%; height:100%; object-fit:cover; transition:transform .4s;}
+  .card:hover .card-media img{transform:scale(1.05);}
+  .card-media.no-image{
+    display:flex; align-items:center; justify-content:center;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(232,0,28,0.18), transparent 60%), var(--surface-hover);
+  }
+  .card-media.no-image span{font-family:var(--font-display); font-weight:700; font-size:2rem; color:rgba(232,0,28,0.35);}
+  .card-body{padding:22px 22px 24px; display:flex; flex-direction:column; flex:1;}
+  .card-body h3{
+    font-family:var(--font-display); font-weight:700; font-size:1.08rem; line-height:1.28;
+    margin:14px 0 10px; letter-spacing:-0.005em;
+  }
+  .card-body p{color:var(--muted); font-size:0.9rem; line-height:1.6; flex:1;}
+  .card .meta-row{margin-top:18px; padding-top:16px; border-top:1px solid var(--line);}
+
+  /* Newsletter / CTA strip */
+  .cta-strip{
+    background:var(--surface); border:1px solid var(--line); border-radius:20px;
+    padding:52px 48px; margin-bottom:100px; display:flex; align-items:center; justify-content:space-between; gap:24px;
+    flex-wrap:wrap;
+  }
+  .cta-strip h3{font-family:var(--font-display); font-weight:700; font-size:1.6rem; max-width:20ch; letter-spacing:-0.01em;}
+  .cta-strip p{color:var(--muted); margin-top:8px; font-size:0.95rem;}
+  .btn-primary{
+    background:var(--red); color:#fff; padding:14px 28px; border-radius:100px; font-weight:600;
+    font-size:0.95rem; white-space:nowrap; transition:background .2s, transform .2s;
+  }
+  .btn-primary:hover{background:var(--coral); transform:translateY(-1px);}
+
+  footer{border-top:1px solid var(--line); padding:40px 0; }
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  footer p{color:var(--muted); font-size:0.85rem; font-family:var(--font-mono);}
+
+  @media (max-width: 900px){
+    .featured{grid-template-columns:1fr;}
+    .featured-media{min-height:220px;}
+    .grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width: 640px){
+    .wrap{padding:0 20px;}
+    .nav-links{position:fixed; top:64px; left:0; right:0; background:var(--bg); border-bottom:1px solid var(--line);
+      flex-direction:column; align-items:flex-start; padding:20px; gap:18px; transform:translateY(-150%); transition:transform .25s; z-index:40;}
+    .nav-links.open{transform:translateY(0);}
+    .nav-toggle{display:block;}
+    .nav-cta{display:none;}
+    .grid{grid-template-columns:1fr;}
+    .featured-body{padding:30px 26px;}
+    .cta-strip{padding:36px 26px; flex-direction:column; align-items:flex-start;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="https://brandiecreative.netlify.app/" class="logo">Brandie Creative<em>.</em></a>
+    <div class="nav-links" id="navLinks">
+      <a href="https://brandiecreative.netlify.app/#services">Services</a>
+      <a href="https://brandiecreative.netlify.app/#portfolio">Work</a>
+      <a href="https://brandiecreative.netlify.app/#about">About</a>
+      <a href="./index.html" class="active">Blog</a>
+      <a href="https://brandiecreative.netlify.app/#contact">Contact</a>
+    </div>
+    <a href="https://calendly.com/brandiecreative" class="nav-cta">Book a Call</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Field Notes</div>
+      <h1>Ideas on conversion,<br>motion &amp; growth.</h1>
+      <p class="hero-sub">Case studies and working notes from inside the projects — what moved the metrics, what didn't, and why.</p>
+
+      <div id="featuredContainer"></div>
+    </section>
+
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="All">All</button>
+    </div>
+
+    <section class="grid" id="grid"></section>
+
+    <section class="cta-strip">
+      <div>
+        <h3>Have a growth problem worth solving?</h3>
+        <p>Free 20-minute discovery call — no pitch, just a clear next step.</p>
+      </div>
+      <a href="https://calendly.com/brandiecreative" class="btn-primary">Book a Free Call ↗</a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Brandie Creative. Available Worldwide.</p>
+    <p>Designed to convert</p>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  let POSTS = [];
+  let activeFilter = 'All';
+
+  function fmtDate(iso){
+    return new Date(iso).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+  }
+
+  function sparkline(trend){
+    if(!trend) return '';
+    const max = Math.max(...trend);
+    return trend.map(v => `<i style="height:${Math.max(4,(v/max)*22)}px"></i>`).join('');
+  }
+
+  function renderFeatured(post){
+    const c = document.getElementById('featuredContainer');
+    if(!post){ c.innerHTML = ''; return; }
+    c.innerHTML = `
+      <a href="./post.html?slug=${post.slug}" class="featured">
+        <div class="featured-media">
+          ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ''}
+        </div>
+        <div class="featured-body">
+          <span class="tag">${post.category}</span>
+          <h2>${post.title}</h2>
+          <p>${post.excerpt}</p>
+          <div class="meta-row">
+            <span>${fmtDate(post.date)}</span><span class="dot"></span>
+            <span>${post.readTime} min read</span><span class="dot"></span>
+            <span>${post.author}</span>
+          </div>
+          ${post.metric ? `
+          <div class="metric-chip">
+            <span class="val">${post.metric.value}</span>
+            <span class="lbl">${post.metric.label}</span>
+            <div class="spark">${sparkline(post.metric.trend)}</div>
+          </div>` : ''}
+        </div>
+      </a>`;
+  }
+
+  function renderGrid(){
+    const grid = document.getElementById('grid');
+    const rest = POSTS.filter(p => !p.featured || activeFilter !== 'All')
+                       .filter(p => activeFilter === 'All' ? !p.featured : p.category === activeFilter);
+    grid.innerHTML = rest.map(post => `
+      <a href="./post.html?slug=${post.slug}" class="card">
+        ${post.image
+          ? `<div class="card-media"><img src="${post.image}" alt="${post.title}" loading="lazy"></div>`
+          : `<div class="card-media no-image"><span>BC</span></div>`}
+        <div class="card-body">
+          <span class="tag">${post.category}</span>
+          <h3>${post.title}</h3>
+          <p>${post.excerpt}</p>
+          <div class="meta-row">
+            <span>${fmtDate(post.date)}</span><span class="dot"></span>
+            <span>${post.readTime} min read</span>
+          </div>
+        </div>
+      </a>`).join('');
+  }
+
+  function renderFilters(){
+    const cats = ['All', ...new Set(POSTS.map(p => p.category))];
+    document.getElementById('filters').innerHTML = cats.map(c =>
+      `<button class="filter-btn ${c === activeFilter ? 'active' : ''}" data-filter="${c}">${c}</button>`
+    ).join('');
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeFilter = btn.dataset.filter;
+        renderFilters();
+        renderGrid();
+        renderFeatured(activeFilter === 'All' ? POSTS.find(p => p.featured) : null);
+      });
+    });
+  }
+
+  async function init(){
+    try{
+      const res = await fetch('./posts.json');
+      POSTS = await res.json();
+      renderFeatured(POSTS.find(p => p.featured));
+      renderFilters();
+      renderGrid();
+    }catch(err){
+      document.getElementById('grid').innerHTML = `<p style="color:var(--muted)">Couldn't load posts right now — please refresh.</p>`;
+      console.error(err);
+    }
+  }
+  init();
+</script>
+</body>
+</html>

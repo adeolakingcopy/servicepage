@@ -1,0 +1,139 @@
+[
+  {
+    "slug": "mavenmint-landing-page-conversion",
+    "category": "Conversion Design",
+    "title": "Why Your Landing Page Isn't Converting (And How We Fixed It for Mavenmint)",
+    "excerpt": "Mavenmint Academy had traffic but flat signups. Here's the exact messaging and layout audit that turned browsers into +42% more course signups in six weeks.",
+    "date": "2026-06-18",
+    "readTime": 6,
+    "author": "Brandie Creative",
+    "featured": true,
+    "metric": { "label": "Signups", "value": "+42%", "trend": [4, 6, 5, 9, 12, 18, 24] },
+    "image": "https://brandiecreative.netlify.app/Macbook-Air-join.mavenmint.io%20(1).webp",
+    "content": [
+      { "type": "p", "text": "Mavenmint came to us with a familiar problem: decent traffic, forgettable results. Visitors were landing on the homepage, scrolling once, and leaving. The site looked fine. It just wasn't doing a job." },
+      { "type": "h2", "text": "The audit: three things nobody was saying" },
+      { "type": "p", "text": "We ran a five-second test on the old homepage with people outside the industry. Almost nobody could say what Mavenmint actually taught, who it was for, or what happened after you signed up. The hero was full of words and empty of information." },
+      { "type": "quote", "text": "A visitor should be able to tell you what you sell before they finish reading your headline." },
+      { "type": "p", "text": "So we rebuilt the hero around one sentence: what you learn, who teaches it, and how fast you can start. Everything else moved below the fold or got cut." },
+      { "type": "h2", "text": "Proof, moved up" },
+      { "type": "p", "text": "The old site buried testimonials and outcomes near the footer, after the pricing table. We moved a single, specific outcome statistic directly under the hero, ahead of any pitch. Specific numbers outperform adjectives every time." },
+      { "type": "h2", "text": "Result" },
+      { "type": "p", "text": "Six weeks after launch, course signups were up 42%, with no change in ad spend. The traffic hadn't changed. The page finally told visitors what to do with it." }
+    ],
+    "related": ["femi-maven-load-speed-engagement", "growth-funnel-framework"]
+  },
+  {
+    "slug": "femi-maven-load-speed-engagement",
+    "category": "SEO & Performance",
+    "title": "The Half-Second Rule: How Load Speed Quietly Killed Engagement on Femi Maven",
+    "excerpt": "Every additional half-second of load time cost Femi Maven real readers. A performance pass and a clearer message structure brought engagement up 30%.",
+    "date": "2026-05-27",
+    "readTime": 5,
+    "author": "Brandie Creative",
+    "featured": false,
+    "metric": { "label": "Engagement", "value": "+30%", "trend": [10, 11, 9, 14, 17, 19, 22] },
+    "image": "https://brandiecreative.netlify.app/Macbook-Air-femimaven.netlify.app.webp",
+    "content": [
+      { "type": "p", "text": "Femi Maven's site had a beautiful design problem: it was heavy. Full-bleed imagery, uncompressed video backgrounds, and web fonts loading in sequence rather than in parallel. On a fast connection it looked great. On anything else, people bailed before the page finished painting." },
+      { "type": "h2", "text": "What we measured" },
+      { "type": "p", "text": "We tracked Largest Contentful Paint and correlated it against scroll depth. The relationship was almost linear — the slower the hero rendered, the fewer people scrolled past it, regardless of how good the content underneath actually was." },
+      { "type": "h2", "text": "What we changed" },
+      { "type": "p", "text": "Compressed and lazy-loaded imagery, swapped the video background for a lightweight animated gradient, and restructured the messaging so the first screen answered one question clearly instead of three questions vaguely." },
+      { "type": "quote", "text": "Speed is a messaging decision before it's an engineering one — a slow page is a page nobody reads." },
+      { "type": "h2", "text": "Result" },
+      { "type": "p", "text": "Engagement climbed 30% post-launch, measured by scroll depth and time on key pages. The lesson traveled well beyond this one project: performance work is conversion work." }
+    ],
+    "related": ["mavenmint-landing-page-conversion", "schema-markup-seo"]
+  },
+  {
+    "slug": "motion-graphics-that-move-the-needle",
+    "category": "Motion Design",
+    "title": "Motion Graphics That Actually Move the Needle, Not Just the Pixels",
+    "excerpt": "From the Osun State Tech Event stage to the Withjara vendor app launch, here's how we decide when motion earns its place in a campaign — and when it's just noise.",
+    "date": "2026-05-04",
+    "readTime": 7,
+    "author": "Brandie Creative",
+    "featured": false,
+    "metric": null,
+    "image": null,
+    "content": [
+      { "type": "p", "text": "Motion is expensive to make and easy to waste. Before we animate anything, we ask what a still frame couldn't say — pacing, transformation, or a sequence that only makes sense in motion. If the answer is 'it would look nice,' that's not a brief, that's a mood board." },
+      { "type": "h2", "text": "Osun State Tech Event: motion as a stage device" },
+      { "type": "p", "text": "For a live government tech event, the brief was attention under stage lights, on a screen most of the room would glance at rather than study. We built short, high-contrast loops that read clearly at a distance and reset every eight seconds — built for peripheral vision, not close viewing." },
+      { "type": "h2", "text": "Withjara: motion as onboarding" },
+      { "type": "p", "text": "The Withjara vendor app promo had a harder job: explain a two-sided marketplace in under thirty seconds to people who had never used one. We used motion to show cause and effect — a vendor action on one side of the screen triggering a customer result on the other — something a static graphic simply can't demonstrate." },
+      { "type": "quote", "text": "Motion should explain a mechanism, not decorate a headline." },
+      { "type": "h2", "text": "The rule we hold ourselves to" },
+      { "type": "p", "text": "If a client asks for motion and we can't name what it's teaching or triggering emotionally, we push back before we animate. Every second of movement should be doing a job." }
+    ],
+    "related": ["mavenmint-landing-page-conversion", "growth-funnel-framework"]
+  },
+  {
+    "slug": "soq-legal-trust-online",
+    "category": "Conversion Design",
+    "title": "Building Trust in Six Seconds: Lessons from Redesigning SOQ Legal",
+    "excerpt": "A law firm's website has one real job before anything else: prove it's legitimate, fast. Here's how a credibility-first redesign brought SOQ Legal more client enquiries.",
+    "date": "2026-04-11",
+    "readTime": 5,
+    "author": "Brandie Creative",
+    "featured": false,
+    "metric": null,
+    "image": "https://brandiecreative.netlify.app/Macbook-Air-soqlegal.com.webp",
+    "content": [
+      { "type": "p", "text": "Nobody hires a law firm off a hunch. Before a visitor reads a single word of copy on a legal site, they're scanning for signals: does this look real, does this look current, does this look like a firm that wins cases. SOQ Legal's old site was answering none of those questions in the first six seconds." },
+      { "type": "h2", "text": "Credibility signals, in order" },
+      { "type": "p", "text": "We rebuilt the homepage around a strict hierarchy: who they are, what they practice, proof they've done it before, then how to reach them. No stock photography, no generic scale-of-justice iconography — actual practice areas and actual outcomes, stated plainly." },
+      { "type": "h2", "text": "Removing friction, not adding polish" },
+      { "type": "p", "text": "The redesign wasn't primarily decorative. We cut a five-step contact process down to one form and a phone number visible on every page. Clean design mattered, but the real win was making it effortless to take the next step once trust was established." },
+      { "type": "h2", "text": "Result" },
+      { "type": "p", "text": "Client enquiries increased noticeably post-launch, and SOQ Legal reported the new site was the first thing prospective clients mentioned on discovery calls." }
+    ],
+    "related": ["femi-maven-load-speed-engagement", "schema-markup-seo"]
+  },
+  {
+    "slug": "growth-funnel-framework",
+    "category": "Growth Strategy",
+    "title": "From Attention to Action: The Growth Funnel Framework We Build Around",
+    "excerpt": "Traffic isn't the bottleneck for most founders we work with — the handoff between attention and action is. Here's the framework we use to find where it's leaking.",
+    "date": "2026-03-22",
+    "readTime": 8,
+    "author": "Brandie Creative",
+    "featured": false,
+    "metric": null,
+    "image": null,
+    "content": [
+      { "type": "p", "text": "Most founders assume their growth problem is a traffic problem. Almost every audit we run says otherwise — the leak is somewhere between someone noticing the brand and someone taking the first real action." },
+      { "type": "h2", "text": "The four stages we actually measure" },
+      { "type": "p", "text": "Attention (did they notice you), Comprehension (did they understand the offer), Trust (did they believe you could deliver it), and Action (did the next step feel small enough to take). Most sites optimize stage one and ignore the other three entirely." },
+      { "type": "h2", "text": "Where the leaks usually hide" },
+      { "type": "p", "text": "Comprehension breaks when a headline is clever instead of clear. Trust breaks when proof is vague or absent. Action breaks when the next step requires more effort than the visitor's current level of interest justifies — a long form for a cold visitor, a call booking for someone who just arrived." },
+      { "type": "quote", "text": "You don't fix a growth problem by adding more people to the top of a leaking funnel." },
+      { "type": "h2", "text": "How we use it with clients" },
+      { "type": "p", "text": "Before any design or ad work starts, we map a client's funnel against these four stages and find the weakest one. It's almost never the stage they assumed. That single finding usually reshapes the entire project brief." }
+    ],
+    "related": ["mavenmint-landing-page-conversion", "motion-graphics-that-move-the-needle"]
+  },
+  {
+    "slug": "schema-markup-seo",
+    "category": "SEO & Performance",
+    "title": "SEO Isn't Dead. Your Schema Markup Is.",
+    "excerpt": "Most 'SEO is dead' takes are really 'my technical SEO was never implemented' takes. A look at the unglamorous schema and on-page work that still moves rankings.",
+    "date": "2026-02-14",
+    "readTime": 6,
+    "author": "Brandie Creative",
+    "featured": false,
+    "metric": null,
+    "image": null,
+    "content": [
+      { "type": "p", "text": "Every few months someone declares SEO dead, usually right after a Google update reshuffles rankings. What's actually dead, most of the time, is a site's technical foundation — schema markup that was never written, headings that don't describe the content, and pages competing with each other for the same keyword." },
+      { "type": "h2", "text": "The unglamorous work that still works" },
+      { "type": "p", "text": "Structured data doesn't make a page more visible by magic — it makes a page legible to a machine that's deciding how to summarize it. Article schema, FAQ schema, and organization schema are still some of the highest-leverage, lowest-effort work available, and most small business sites simply don't have it." },
+      { "type": "h2", "text": "On-page basics that get skipped" },
+      { "type": "p", "text": "One H1 per page. Headings that describe the section, not headings written for style. Meta descriptions that answer the query instead of teasing it. None of this is exciting, and all of it is still the difference between being indexed correctly and being invisible." },
+      { "type": "h2", "text": "Where AI search changes the calculus" },
+      { "type": "p", "text": "As more discovery happens through AI-generated answers, clear structure matters more, not less — a page that's easy for a crawler to parse into facts is also easy for an AI system to cite. The fundamentals didn't get replaced. They got more important." }
+    ],
+    "related": ["femi-maven-load-speed-engagement", "soq-legal-trust-online"]
+  }
+]

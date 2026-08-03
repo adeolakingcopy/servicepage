@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0F0709">
+<title id="pageTitle">Field Notes — Brandie Creative Blog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red: #E8001C;
+    --coral: #F34025;
+    --bg: #0F0709;
+    --surface: #180D0F;
+    --surface-hover: #201113;
+    --line: #2E191C;
+    --ink: #FEFBFC;
+    --muted: #A08688;
+    --tint: #FBE9EB;
+    --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --container: 1180px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg); color:var(--ink); font-family:var(--font-body); line-height:1.5; -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--container); margin:0 auto; padding:0 32px;}
+  ::selection{ background:var(--red); color:#fff; }
+
+  .progress{position:sticky; top:0; height:2px; width:100%; background:var(--line); z-index:60;}
+  .progress-bar{height:100%; width:0%; background:linear-gradient(90deg, var(--red), var(--coral)); transition:width .1s;}
+
+  nav{position:sticky; top:2px; z-index:50; background:rgba(15,7,9,0.82); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; padding:18px 32px;}
+  .logo{font-family:var(--font-display); font-weight:700; font-size:1.15rem; letter-spacing:-0.01em;}
+  .logo em{font-style:normal; color:var(--red);}
+  .nav-links{display:flex; gap:32px; align-items:center;}
+  .nav-links a{font-size:0.92rem; color:var(--muted); transition:color .2s;}
+  .nav-links a:hover, .nav-links a.active{color:var(--ink);}
+  .nav-cta{background:var(--red); color:#fff; padding:10px 20px; border-radius:100px; font-size:0.88rem; font-weight:600; transition:background .2s, transform .2s;}
+  .nav-cta:hover{background:var(--coral); transform:translateY(-1px);}
+  .nav-toggle{display:none; background:none; border:none; color:var(--ink); font-size:1.4rem; cursor:pointer;}
+
+  .post-wrap{max-width:760px; margin:0 auto; padding:0 32px;}
+
+  .back-link{display:inline-flex; align-items:center; gap:8px; margin-top:44px; color:var(--muted); font-family:var(--font-mono); font-size:0.82rem; transition:color .2s;}
+  .back-link:hover{color:var(--red);}
+
+  .tag{
+    display:inline-flex; align-items:center; gap:6px; margin-top:28px;
+    font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--red); border:1px solid rgba(232,0,28,0.4); background:rgba(232,0,28,0.08);
+    padding:5px 12px; border-radius:100px;
+  }
+  .post-title{
+    font-family:var(--font-display); font-weight:700; letter-spacing:-0.02em;
+    font-size:clamp(2rem, 4.6vw, 3.1rem); line-height:1.08; margin-top:20px;
+  }
+  .meta-row{
+    display:flex; align-items:center; gap:16px; font-family:var(--font-mono);
+    font-size:0.8rem; color:var(--muted); margin-top:24px;
+  }
+  .meta-row .dot{width:3px; height:3px; border-radius:50%; background:var(--muted);}
+
+  .metric-chip{
+    display:flex; align-items:center; gap:10px; margin-top:28px; padding:14px 18px;
+    background:rgba(232,0,28,0.06); border:1px solid var(--line); border-radius:12px; width:fit-content;
+  }
+  .metric-chip .val{font-family:var(--font-display); font-weight:700; color:var(--red); font-size:1.4rem;}
+  .metric-chip .lbl{font-family:var(--font-mono); font-size:0.74rem; color:var(--muted); text-transform:uppercase;}
+  .spark{display:flex; align-items:flex-end; gap:2px; height:24px; margin-left:8px;}
+  .spark i{width:3px; background:var(--red); border-radius:1px; opacity:0.85;}
+
+  .hero-media{
+    margin:44px auto 0; max-width:var(--container); padding:0 32px;
+  }
+  .hero-media img{width:100%; border-radius:16px; border:1px solid var(--line);}
+
+  article{padding:48px 0 0; font-size:1.08rem; line-height:1.8; color:#EAD9DA;}
+  article h2{
+    font-family:var(--font-display); font-weight:700; font-size:1.5rem; letter-spacing:-0.01em;
+    margin:44px 0 16px; color:var(--ink);
+  }
+  article p{margin-bottom:20px;}
+  article blockquote{
+    margin:36px 0; padding:4px 0 4px 24px; border-left:2px solid var(--red);
+    font-family:var(--font-display); font-weight:500; font-size:1.3rem; line-height:1.5;
+    color:var(--ink); font-style:normal;
+  }
+
+  .author-card{
+    margin:64px 0 0; padding:32px; background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;
+  }
+  .author-card h4{font-family:var(--font-display); font-weight:700; font-size:1.15rem; letter-spacing:-0.01em;}
+  .author-card p{color:var(--muted); font-size:0.9rem; margin-top:4px;}
+  .btn-primary{background:var(--red); color:#fff; padding:12px 24px; border-radius:100px; font-weight:600; font-size:0.9rem; white-space:nowrap; transition:background .2s, transform .2s;}
+  .btn-primary:hover{background:var(--coral); transform:translateY(-1px);}
+
+  .related{max-width:var(--container); margin:0 auto; padding:100px 32px 100px;}
+  .related > .section-label{
+    font-family:var(--font-mono); font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--red); margin-bottom:28px; display:flex; align-items:center; gap:10px;
+  }
+  .related > .section-label::before{content:""; width:22px; height:1px; background:var(--red);}
+  .related-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:16px; overflow:hidden; transition:transform .25s, border-color .25s;}
+  .card:hover{transform:translateY(-4px); border-color:rgba(232,0,28,0.35);}
+  .card-media{height:150px; background:#1A0F11; position:relative; overflow:hidden;}
+  .card-media img{width:100%; height:100%; object-fit:cover;}
+  .card-media.no-image{display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 30% 30%, rgba(232,0,28,0.18), transparent 60%), var(--surface-hover);}
+  .card-media.no-image span{font-family:var(--font-display); font-weight:700; font-size:1.6rem; color:rgba(232,0,28,0.35);}
+  .card-body{padding:20px;}
+  .card-body h3{font-family:var(--font-display); font-weight:700; font-size:1rem; line-height:1.3; margin-top:10px;}
+
+  footer{border-top:1px solid var(--line); padding:40px 0;}
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  footer p{color:var(--muted); font-size:0.85rem; font-family:var(--font-mono);}
+
+  #loadingState{padding:120px 32px; text-align:center; color:var(--muted); font-family:var(--font-mono);}
+
+  @media (max-width: 640px){
+    .wrap{padding:0 20px;}
+    .post-wrap, .hero-media{padding:0 20px;}
+    .related{padding:70px 20px;}
+    .related-grid{grid-template-columns:1fr;}
+    .nav-links{position:fixed; top:66px; left:0; right:0; background:var(--bg); border-bottom:1px solid var(--line);
+      flex-direction:column; align-items:flex-start; padding:20px; gap:18px; transform:translateY(-150%); transition:transform .25s; z-index:40;}
+    .nav-links.open{transform:translateY(0);}
+    .nav-toggle{display:block;}
+    .nav-cta{display:none;}
+    .author-card{flex-direction:column; align-items:flex-start;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+
+<nav>
+  <div class="wrap">
+    <a href="https://brandiecreative.netlify.app/" class="logo">Brandie Creative<em>.</em></a>
+    <div class="nav-links" id="navLinks">
+      <a href="https://brandiecreative.netlify.app/#services">Services</a>
+      <a href="https://brandiecreative.netlify.app/#portfolio">Work</a>
+      <a href="https://brandiecreative.netlify.app/#about">About</a>
+      <a href="./index.html" class="active">Blog</a>
+      <a href="https://brandiecreative.netlify.app/#contact">Contact</a>
+    </div>
+    <a href="https://calendly.com/brandiecreative" class="nav-cta">Book a Call</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</nav>
+
+<main id="main">
+  <div id="loadingState">Loading post…</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Brandie Creative. Available Worldwide.</p>
+    <p>Designed to convert</p>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  function fmtDate(iso){
+    return new Date(iso).toLocaleDateString('en-US', { month:'long', day:'numeric', year:'numeric' });
+  }
+
+  function sparkline(trend){
+    if(!trend) return '';
+    const max = Math.max(...trend);
+    return trend.map(v => `<i style="height:${Math.max(5,(v/max)*24)}px"></i>`).join('');
+  }
+
+  function renderContent(blocks){
+    return blocks.map(b => {
+      if(b.type === 'h2') return `<h2>${b.text}</h2>`;
+      if(b.type === 'quote') return `<blockquote>${b.text}</blockquote>`;
+      return `<p>${b.text}</p>`;
+    }).join('');
+  }
+
+  function renderRelated(post, all){
+    if(!post.related || !post.related.length) return '';
+    const items = post.related.map(slug => all.find(p => p.slug === slug)).filter(Boolean);
+    if(!items.length) return '';
+    return `
+      <section class="related">
+        <div class="section-label">Keep Reading</div>
+        <div class="related-grid">
+          ${items.map(p => `
+            <a href="./post.html?slug=${p.slug}" class="card">
+              ${p.image
+                ? `<div class="card-media"><img src="${p.image}" alt="${p.title}" loading="lazy"></div>`
+                : `<div class="card-media no-image"><span>BC</span></div>`}
+              <div class="card-body">
+                <span style="font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--red);">${p.category}</span>
+                <h3>${p.title}</h3>
+              </div>
+            </a>`).join('')}
+        </div>
+      </section>`;
+  }
+
+  function render(post, all){
+    document.getElementById('pageTitle').textContent = post.title + ' — Brandie Creative Blog';
+    document.getElementById('main').innerHTML = `
+      <div class="post-wrap">
+        <a href="./index.html" class="back-link">&larr; Back to Field Notes</a>
+        <span class="tag">${post.category}</span>
+        <h1 class="post-title">${post.title}</h1>
+        <div class="meta-row">
+          <span>${fmtDate(post.date)}</span><span class="dot"></span>
+          <span>${post.readTime} min read</span><span class="dot"></span>
+          <span>${post.author}</span>
+        </div>
+        ${post.metric ? `
+        <div class="metric-chip">
+          <span class="val">${post.metric.value}</span>
+          <span class="lbl">${post.metric.label}</span>
+          <div class="spark">${sparkline(post.metric.trend)}</div>
+        </div>` : ''}
+      </div>
+      ${post.image ? `<div class="hero-media"><img src="${post.image}" alt="${post.title}"></div>` : ''}
+      <div class="post-wrap">
+        <article>${renderContent(post.content)}</article>
+        <div class="author-card">
+          <div>
+            <h4>Have a similar problem?</h4>
+            <p>We take on a select number of projects each quarter.</p>
+          </div>
+          <a href="https://calendly.com/brandiecreative" class="btn-primary">Book a Free Call ↗</a>
+        </div>
+      </div>
+      ${renderRelated(post, all)}
+    `;
+
+    window.addEventListener('scroll', () => {
+      const article = document.querySelector('article');
+      if(!article) return;
+      const rect = article.getBoundingClientRect();
+      const total = rect.height - window.innerHeight;
+      const scrolled = Math.min(Math.max(-rect.top, 0), total);
+      const pct = total > 0 ? (scrolled / total) * 100 : 0;
+      document.getElementById('progressBar').style.width = pct + '%';
+    });
+  }
+
+  async function init(){
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('slug');
+    try{
+      const res = await fetch('./posts.json');
+      const all = await res.json();
+      const post = all.find(p => p.slug === slug) || all[0];
+      if(!post){
+        document.getElementById('loadingState').textContent = 'Post not found.';
+        return;
+      }
+      render(post, all);
+    }catch(err){
+      document.getElementById('loadingState').textContent = "Couldn't load this post — please refresh.";
+      console.error(err);
+    }
+  }
+  init();
+</script>
+</body>
+</html>
