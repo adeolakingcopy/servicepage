@@ -12,7 +12,7 @@
   <meta property="og:title" content="Brandie Creative — Digital Marketing & Growth Strategy" />
   <meta property="og:image" content="https://brandiecreative.netlify.app/brandie-creative.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https:/brandiecreative.netlify.app/" />
+  <link rel="canonical" href="https://brandiecreative.netlify.app/" />
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23060606'/><text x='4' y='24' font-family='DM Sans,sans-serif' font-weight='700' font-size='22' fill='%23f2ede6'>B</text><circle cx='27' cy='22' r='3' fill='%23e8001c'/></svg>" />
   <meta name="theme-color" content="#060606" />
@@ -497,23 +497,9 @@
       animation: fade-in-up 0.6s ease-out 0.5s forwards;
     }
 
-    .hero-tagline {
-      margin-top: 22px;
-      font-size: .78rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: rgba(242, 237, 230, .35);
-      opacity: 0;
-      animation: fade-in-up 0.6s ease-out 0.6s forwards;
-    }
-
     @media (max-width: 968px) {
       .hero-buttons {
         justify-content: center;
-      }
-
-      .hero-tagline {
-        text-align: center;
       }
     }
 
@@ -1713,218 +1699,6 @@
       font-style: italic
     }
 
-    /* ── PROBLEM ── */
-    #problem {
-      padding: 8rem 3.5rem;
-      max-width: 1280px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    .problem-list {
-      margin-top: 2.4rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 560px;
-    }
-
-    .problem-item {
-      display: flex;
-      align-items: center;
-      gap: .9rem;
-      font-size: 1.05rem;
-      color: var(--grey);
-      font-weight: 300;
-    }
-
-    .problem-item i {
-      width: 18px;
-      height: 18px;
-      color: var(--red);
-      flex-shrink: 0;
-    }
-
-    .problem-pivot {
-      margin-top: 2.8rem;
-      padding-left: 1.6rem;
-      border-left: 2px solid var(--red);
-      max-width: 640px;
-    }
-
-    .problem-pivot-tag {
-      display: inline-block;
-      font-family: var(--reel);
-      font-size: .68rem;
-      font-weight: 700;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: .8rem;
-    }
-
-    .problem-pivot p {
-      font-size: 1.2rem;
-      line-height: 1.65;
-      color: var(--white);
-      font-weight: 300;
-    }
-
-    .problem-pivot strong {
-      font-weight: 700;
-      color: var(--red);
-    }
-
-    @media (max-width: 640px) {
-      #problem {
-        padding: 5rem 1.2rem;
-      }
-    }
-
-    /* ── THE SYSTEM ── */
-    #system {
-      padding: 9rem 3.5rem;
-      max-width: 1280px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    .system-grid {
-      margin-top: 5rem;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      position: relative;
-    }
-
-    .system-grid::before {
-      content: '';
-      position: absolute;
-      top: 34px;
-      left: 8%;
-      right: 8%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--glass-border) 12%, var(--glass-border) 88%, transparent);
-      z-index: 0;
-    }
-
-    .system-step {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-    }
-
-    .system-num {
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      background: var(--mid);
-      border: 1px solid var(--glass-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.6rem;
-      font-family: var(--reel);
-      font-weight: 700;
-      color: var(--red);
-      font-size: 1.05rem;
-    }
-
-    .system-name {
-      font-family: var(--beb);
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: .7rem;
-    }
-
-    .system-desc {
-      font-size: .85rem;
-      color: var(--grey);
-      line-height: 1.75;
-      font-weight: 300;
-      max-width: 220px;
-      margin: 0 auto;
-    }
-
-    .system-flow {
-      margin-top: 4.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: .8rem;
-      flex-wrap: wrap;
-      font-family: var(--reel);
-      font-size: .7rem;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: rgba(242, 237, 230, .5);
-    }
-
-    .system-flow i {
-      width: 14px;
-      height: 14px;
-      color: var(--red);
-    }
-
-    @media (max-width: 860px) {
-      .system-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 2.5rem 1.5rem;
-      }
-
-      .system-grid::before {
-        display: none;
-      }
-    }
-
-    @media (max-width: 640px) {
-      #system {
-        padding: 5rem 1.2rem;
-      }
-
-      .system-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* ── WHY BRANDIE ── */
-    #why {
-      padding: 8rem 3.5rem;
-      max-width: 1280px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-      border-top: 1px solid var(--glass-border);
-    }
-
-    .why-text {
-      font-size: 1rem;
-      color: var(--grey);
-      line-height: 1.8;
-      margin-top: 1.4rem;
-      max-width: 560px;
-      font-weight: 300;
-    }
-
-    .why-question {
-      font-family: var(--beb);
-      font-size: clamp(1.6rem, 3vw, 2.3rem);
-      font-weight: 700;
-      font-style: italic;
-      color: var(--red);
-      margin-top: 2rem;
-      max-width: 640px;
-    }
-
-    @media (max-width: 640px) {
-      #why {
-        padding: 5rem 1.2rem;
-      }
-    }
-
 
     /* ── SERVICES ── */
     #services {
@@ -2074,73 +1848,6 @@
       background: rgba(232, 0, 28, .08);
       border-color: rgba(232, 0, 28, .2);
       color: rgba(242, 237, 230, .7)
-    }
-
-    .svc-hook {
-      font-family: var(--beb);
-      font-size: 1.15rem;
-      font-weight: 700;
-      line-height: 1.35;
-      color: var(--white);
-      margin-bottom: 1rem;
-    }
-
-    .svc-link {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      margin-top: 1.8rem;
-      font-family: var(--reel);
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--red);
-      text-decoration: none;
-    }
-
-    .svc-link i {
-      width: 14px;
-      height: 14px;
-      transition: transform .25s;
-    }
-
-    .svc-link:hover i {
-      transform: translate(3px, -3px);
-    }
-
-    .svc-do-label {
-      font-family: var(--reel);
-      font-size: .6rem;
-      font-weight: 700;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: rgba(242, 237, 230, .4);
-      margin-top: 1.8rem;
-      margin-bottom: .9rem;
-    }
-
-    .svc-do-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: .6rem 1rem;
-    }
-
-    .svc-do-list div {
-      font-size: .8rem;
-      color: rgba(242, 237, 230, .65);
-      display: flex;
-      align-items: center;
-      gap: .55rem;
-    }
-
-    .svc-do-list div::before {
-      content: '';
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--red);
-      flex-shrink: 0;
     }
 
     /* ── PORTFOLIO ── */
@@ -3685,123 +3392,6 @@
       height: 14px
     }
 
-    /* ── RESULTS / PROOF ── */
-    #proof {
-      padding: 9rem 3.5rem;
-      max-width: 1280px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    .proof-grid {
-      margin-top: 5rem;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    .proof-card {
-      background: rgba(255, 255, 255, .03);
-      border: 1px solid var(--glass-border);
-      border-radius: 20px;
-      padding: 2.4rem;
-    }
-
-    .proof-client {
-      font-family: var(--beb);
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: .3rem;
-    }
-
-    .proof-cat {
-      font-family: var(--reel);
-      font-size: .6rem;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 1.8rem;
-    }
-
-    .proof-row {
-      margin-bottom: 1.3rem;
-    }
-
-    .proof-row:last-child {
-      margin-bottom: 0;
-    }
-
-    .proof-row-label {
-      font-family: var(--reel);
-      font-size: .6rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: rgba(242, 237, 230, .4);
-      margin-bottom: .35rem;
-    }
-
-    .proof-row p {
-      font-size: .85rem;
-      line-height: 1.6;
-      color: var(--grey);
-      font-weight: 300;
-    }
-
-    .proof-row.result {
-      padding-top: 1rem;
-      border-top: 1px dashed var(--glass-border);
-    }
-
-    .proof-row.result p {
-      color: var(--white);
-      font-weight: 600;
-    }
-
-    .proof-cta-row {
-      margin-top: 3rem;
-      text-align: center;
-    }
-
-    @media (max-width: 860px) {
-      .proof-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      #proof {
-        padding: 5rem 1.2rem;
-      }
-    }
-
-    .about-goal {
-      margin-bottom: 2.4rem;
-      padding-left: 1.4rem;
-      border-left: 2px solid var(--red);
-    }
-
-    .about-goal-label {
-      font-family: var(--reel);
-      font-size: .64rem;
-      font-weight: 700;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: .6rem;
-    }
-
-    .about-goal p {
-      font-family: var(--beb);
-      font-size: 1.25rem;
-      font-weight: 700;
-      line-height: 1.4;
-      color: var(--white);
-    }
-
     .about-sig {
       font-size: .82rem;
       font-weight: 600;
@@ -5013,25 +4603,31 @@
       <div class="hero-grid">
         <div class="hero-content">
           <span class="hero-badge">Available for Projects</span>
-          <h1>We Build Digital Experiences That <span>Turn Attention</span> Into <span>Customers</span>.</h1>
+          <h1>Building Digital Experiences That <span>Attract</span>, <span>Convert</span> &amp; <span>Scale</span>
+            Brands.</h1>
+          <p class="hero-story">
+            I used to watch talented founders get overlooked online not because their work wasn't good, but
+            because their website made them look like a side hustle instead of the real thing.<br>
+            So I started fixing that.
+          </p>
           <p class="hero-subtitle">
-            Websites, AI-powered commercials, SEO and performance marketing designed to help ambitious brands get
-            noticed, earn trust and drive action.
+            I build conversion-led websites, performance campaigns, and motion graphics that grow revenue, lower
+            your acquisition cost, and make your brand impossible to ignore. No jargon. No 12-page proposals. Just
+            work that makes people take you seriously.
           </p>
           <div class="hero-buttons">
-            <a href="#contact" class="nav-btn morph-btn"><span class="morph-text">Start a Project</span><span
+            <a href="#contact" class="nav-btn-ghost morph-btn"><span class="morph-text">Explore Services</span></a>
+            <a href="#services" class="nav-btn morph-btn"><span class="morph-text">Book a Strategy Call</span><span
                 class="morph-icon" aria-hidden="true">↗</span></a>
-            <a href="#portfolio" class="nav-btn-ghost morph-btn"><span class="morph-text">See Our Work</span></a>
           </div>
-          <div class="hero-tagline">Websites · AI Commercials · SEO · Performance Marketing</div>
         </div>
         <div class="hero-image">
           <div class="profile-card">
             <img src="./brandie-creative.png"
-              alt="Abdurahmon - Creative Director at Brandie Creative">
+              alt="Brandie Creative - Full-Stack Digital Marketer, Web Developer & Creative Director">
             <div class="profile-caption">
               <div class="name">Brandie Creative</div>
-              <div class="role">Creative Director</div>
+              <div class="role">PM/Creative Director</div>
             </div>
           </div>
           <div class="accent-circle" aria-hidden="true"></div>
@@ -5050,102 +4646,57 @@
     <div class="marq-track" id="marquee"></div>
   </div>
 
-  <!-- PROBLEM -->
-  <section id="problem">
-    <div class="sec-label">The Problem</div>
-    <h2 class="sec-title reveal">Getting attention is easy.<br>Turning it into business is harder.</h2>
-    <div class="problem-list reveal d1">
-      <div class="problem-item"><i data-lucide="x"></i>A beautiful website won't fix unclear messaging.</div>
-      <div class="problem-item"><i data-lucide="x"></i>More views won't automatically create customers.</div>
-      <div class="problem-item"><i data-lucide="x"></i>Running ads without a strong destination can waste money.</div>
-    </div>
-    <div class="problem-pivot reveal d2">
-      <span class="problem-pivot-tag">That's where we come in</span>
-      <p>Brandie Creative combines creative, technology and marketing to build digital experiences that move people
-        from <strong>attention → interest → action.</strong></p>
-    </div>
-  </section>
-
   <!-- SERVICES -->
   <section id="services">
-    <div class="sec-label">Services</div>
-    <h2 class="sec-title reveal">Everything your brand<br>needs to turn attention<br>into action.</h2>
+    <div class="sec-label">What We Deliver</div>
+    <h2 class="sec-title reveal">Marketing that<br>Converts.</h2>
+    <p class="sec-sub reveal d1">Strategy, creative and performance working together to grow your business.</p>
     <div class="svc-grid">
       <div class="svc reveal">
         <div class="svc-num">01</div>
-        <div class="svc-icon-wrap"><i data-lucide="monitor"></i></div>
-        <div class="svc-name">Conversion Websites</div>
-        <p class="svc-hook">Don't just look professional. Make your website work.</p>
-        <p class="svc-desc">We design and build websites and landing pages that communicate your value clearly,
-          build trust quickly and guide visitors toward action.</p>
-        <div class="svc-do-label">What we do</div>
-        <div class="svc-do-list">
-          <div>Conversion-focused websites</div>
-          <div>Landing pages</div>
-          <div>E-commerce websites</div>
-          <div>UX &amp; UI design</div>
-          <div>Website copy</div>
-          <div>Performance optimization</div>
+        <div class="svc-icon-wrap"><i data-lucide="film"></i></div>
+        <div class="svc-name">Motion-graphics Videos</div>
+        <p class="svc-desc">Brand stories and social assets designed to capture attention, explain your offer fast, and
+          move prospects from curiosity to action across video, ads, and launch campaigns.</p>
+        <div class="svc-tags">
+          <span class="tag">Explainer Videos</span><span class="tag">Social Promos</span>
+          <span class="tag">Logo Animation</span><span class="tag">Product Demos</span>
         </div>
-        <a href="#contact" class="svc-link">Build My Website <i data-lucide="arrow-up-right"></i></a>
       </div>
-
       <div class="svc reveal d1">
         <div class="svc-num">02</div>
-        <div class="svc-icon-wrap"><i data-lucide="sparkles"></i></div>
-        <div class="svc-name">AI Commercials</div>
-        <p class="svc-hook">Turn your product into something people want to watch.</p>
-        <p class="svc-desc">We create high-impact commercial ads using AI, storytelling, motion design and creative
-          direction — giving brands a faster, more flexible way to produce attention-grabbing campaigns.</p>
-        <div class="svc-do-label">What we do</div>
-        <div class="svc-do-list">
-          <div>Commercial concepts</div>
-          <div>Creative direction</div>
-          <div>Ad scripts</div>
-          <div>AI-generated visuals</div>
-          <div>Motion design</div>
-          <div>Product commercials</div>
-          <div>Social ad creatives</div>
+        <div class="svc-icon-wrap"><i data-lucide="monitor"></i></div>
+        <div class="svc-name">Conversion Websites</div>
+        <p class="svc-desc">Websites and landing pages built for traffic, trust, and conversion. Clear messaging,
+          fast performance, and UX that turns clicks into leads, calls, and sales.</p>
+        <div class="svc-tags">
+          <span class="tag">Landing Pages</span><span class="tag">Multi-Page Sites</span>
+          <span class="tag">Conversion Design</span><span class="tag">Mobile-First</span>
         </div>
-        <a href="#contact" class="svc-link">Create My Commercial <i data-lucide="arrow-up-right"></i></a>
       </div>
-
       <div class="svc reveal d2">
         <div class="svc-num">03</div>
-        <div class="svc-icon-wrap"><i data-lucide="target"></i></div>
-        <div class="svc-name">Performance Marketing</div>
-        <p class="svc-hook">Put your offer in front of the people most likely to buy.</p>
-        <p class="svc-desc">We create and optimize paid campaigns around measurable objectives — whether that's
-          generating leads, driving sales or getting more qualified people into your funnel.</p>
-        <div class="svc-do-label">What we do</div>
-        <div class="svc-do-list">
-          <div>Meta Ads</div>
-          <div>Lead generation</div>
-          <div>Campaign strategy</div>
-          <div>Ad creative</div>
-          <div>Retargeting</div>
-          <div>Campaign optimization</div>
+        <div class="svc-icon-wrap"><i data-lucide="eye"></i></div>
+        <div class="svc-name">Growth Strategy</div>
+        <p class="svc-desc">
+          Turn attention into revenue with funnels, content and campaign logic that attract high-value buyers and
+          scale your brand with measurable results.</p>
+        <div class="svc-tags">
+          <span class="tag">Growth Funnels</span><span class="tag">Direct Response</span>
+          <span class="tag">Performance Ads</span>
         </div>
-        <a href="#contact" class="svc-link">Launch a Campaign <i data-lucide="arrow-up-right"></i></a>
       </div>
-
       <div class="svc reveal d3">
         <div class="svc-num">04</div>
         <div class="svc-icon-wrap"><i data-lucide="search"></i></div>
-        <div class="svc-name">SEO &amp; Organic Growth</div>
-        <p class="svc-hook">Be visible when people are already looking for you.</p>
-        <p class="svc-desc">We optimize your website so search engines can understand it and potential customers
-          can discover your business organically.</p>
-        <div class="svc-do-label">What we do</div>
-        <div class="svc-do-list">
-          <div>On-page SEO</div>
-          <div>Technical SEO</div>
-          <div>Keyword strategy</div>
-          <div>Content optimization</div>
-          <div>Schema markup</div>
-          <div>Performance optimization</div>
+        <div class="svc-name">SEO & Performance</div>
+        <p class="svc-desc">Search and site performance work together to increase visibility, reduce dropoff, and keep
+          your
+          digital experience fast, discoverable and primed for growth.</p>
+        <div class="svc-tags">
+          <span class="tag">On-Page SEO</span><span class="tag">Speed Optimization</span>
+          <span class="tag">Schema Markup</span>
         </div>
-        <a href="#contact" class="svc-link">Improve My Visibility <i data-lucide="arrow-up-right"></i></a>
       </div>
     </div>
   </section>
@@ -5186,56 +4737,12 @@
     </div>
   </section>
 
-  <!-- THE SYSTEM -->
-  <section id="system">
-    <div class="sec-label">The System</div>
-    <h2 class="sec-title reveal">Attention is only<br>the beginning.</h2>
-    <div class="system-grid">
-      <div class="system-step reveal">
-        <div class="system-num">01</div>
-        <div class="system-name">Attract</div>
-        <p class="system-desc">Create campaigns, content and experiences that get the right people to notice you.
-        </p>
-      </div>
-      <div class="system-step reveal d1">
-        <div class="system-num">02</div>
-        <div class="system-name">Engage</div>
-        <p class="system-desc">Give them a reason to stop, understand and care about what you offer.</p>
-      </div>
-      <div class="system-step reveal d2">
-        <div class="system-num">03</div>
-        <div class="system-name">Convert</div>
-        <p class="system-desc">Remove friction and make the next step clear.</p>
-      </div>
-      <div class="system-step reveal d3">
-        <div class="system-num">04</div>
-        <div class="system-name">Grow</div>
-        <p class="system-desc">Measure what works, improve it and build on the momentum.</p>
-      </div>
-    </div>
-    <div class="system-flow reveal d3">
-      <span>Attention</span><i data-lucide="arrow-right"></i><span>Engagement</span><i
-        data-lucide="arrow-right"></i><span>Conversion</span><i data-lucide="arrow-right"></i><span>Growth</span>
-    </div>
-  </section>
-
-  <!-- WHY BRANDIE -->
-  <section id="why">
-    <div class="sec-label">Why Brandie</div>
-    <h2 class="sec-title reveal">Creative that<br>understands business.</h2>
-    <p class="why-text reveal d1">We're not interested in making things look good for the sake of looking good.</p>
-    <p class="why-text reveal d2">Every website, commercial and campaign starts with a simple question:</p>
-    <p class="why-question reveal d3">What should this make the customer do?</p>
-    <p class="why-text reveal d3">That question shapes the strategy, creative and execution.</p>
-  </section>
-
   <!-- PORTFOLIO -->
   <section id="portfolio">
     <div class="port-inner">
-      <div class="sec-label">Work</div>
-      <h2 class="sec-title reveal">Work designed<br>to move people.</h2>
-      <p class="sec-sub reveal d1">Websites. Commercials. Campaigns. A selection of digital experiences and
-        creative work built for real brands.</p>
+      <div class="sec-label">Selected Work</div>
+      <h2 class="sec-title reveal">Stories<br>We've Told.</h2>
+      <p class="sec-sub reveal d1">Websites and motion that move people to act.</p>
 
       <div class="work-stack-wrap reveal d2">
         <div class="work-stack" id="workStack">
@@ -5365,7 +4872,7 @@
 
       </div>
       <div class="port-cta-row reveal">
-        <a href="#contact" class="btn-ghost morph-btn"><span class="morph-text">View Our Work</span></a>
+        <a href="#contact" class="btn-ghost morph-btn"><span class="morph-text">View Full Portfolio</span></a>
       </div>
     </div>
   </section>
@@ -5373,35 +4880,45 @@
   <!-- WHO -->
   <section id="who">
     <div class="who-inner">
-      <div class="sec-label">Who We Work With</div>
-      <h2 class="sec-title reveal">For businesses ready<br>to be taken seriously<br>online.</h2>
-      <p class="sec-sub reveal d1">We work best with ambitious businesses that already have something valuable to
-        offer — but need better digital execution to communicate and sell it.</p>
+      <div class="sec-label">Who This Is For</div>
+      <h2 class="sec-title reveal">Built for the<br>Bold &amp; Driven.</h2>
+      <p class="sec-sub reveal d1">Premium design without the agency price tag.</p>
       <div class="who-grid">
         <div class="who-card reveal">
           <div class="who-icon-wrap"><i data-lucide="rocket"></i></div>
           <div class="who-title">Startups</div>
-          <p class="who-desc">Build credibility from day one.</p>
+          <p class="who-desc">Need to look credible fast? We give startups a premium visual identity and
+            conversion-focused website that punches well above the startup budget.</p>
         </div>
         <div class="who-card reveal d1">
-          <div class="who-icon-wrap"><i data-lucide="shopping-bag"></i></div>
-          <div class="who-title">E-commerce Brands</div>
-          <p class="who-desc">Turn product attention into purchases.</p>
+          <div class="who-icon-wrap"><i data-lucide="briefcase"></i></div>
+          <div class="who-title">Freelancers</div>
+          <p class="who-desc">Win better clients with a portfolio and brand that reflects the quality of your work. Stop
+            competing on price; start commanding premium rates.</p>
         </div>
         <div class="who-card reveal d2">
-          <div class="who-icon-wrap"><i data-lucide="building-2"></i></div>
-          <div class="who-title">Service Businesses</div>
-          <p class="who-desc">Turn website visitors into qualified enquiries.</p>
+          <div class="who-icon-wrap"><i data-lucide="user-check"></i></div>
+          <div class="who-title">Coaches &amp; Creators</div>
+          <p class="who-desc">You're great at what you do — we make sure your online presence proves it. Motion content
+            and clear web design that fills your calendar.</p>
         </div>
         <div class="who-card reveal d3">
-          <div class="who-icon-wrap"><i data-lucide="briefcase"></i></div>
-          <div class="who-title">Professional Brands</div>
-          <p class="who-desc">Build authority and communicate expertise clearly.</p>
+          <div class="who-icon-wrap"><i data-lucide="building-2"></i></div>
+          <div class="who-title">Service Professionals</div>
+          <p class="who-desc">Consultants and service pros who need a site that converts visitors into booked calls —
+            not just a digital business card collecting dust.</p>
         </div>
         <div class="who-card reveal d1">
+          <div class="who-icon-wrap"><i data-lucide="layers"></i></div>
+          <div class="who-title">Product Launchers</div>
+          <p class="who-desc">Launching something new? We build the landing page, explainer animation and social content
+            that drives the launch and sticks around after.</p>
+        </div>
+        <div class="who-card reveal d2">
           <div class="who-icon-wrap"><i data-lucide="trending-up"></i></div>
-          <div class="who-title">Growing Businesses</div>
-          <p class="who-desc">Upgrade your digital presence and create a stronger growth system.</p>
+          <div class="who-title">Growing Brands</div>
+          <p class="who-desc">Ready to level up online? We redesign, refine and add motion to bring your brand story to
+            life at every digital touchpoint.</p>
         </div>
       </div>
     </div>
@@ -5432,39 +4949,36 @@
   <!-- PROCESS -->
   <section id="process">
     <div class="proc-inner">
-      <div class="sec-label">Process</div>
-      <h2 class="sec-title reveal">From idea<br>to execution.</h2>
+      <div class="sec-label">How It Works</div>
+      <h2 class="sec-title reveal">Deliberate<br>By Design.</h2>
       <div class="proc-list">
         <div class="p-step reveal">
           <div class="p-num">01</div>
-          <div class="p-name">Discover</div>
-          <p class="p-desc">We understand your business, audience, offer and goals.</p>
+          <div class="p-name">Discovery &amp; Goals</div>
+          <p class="p-desc">We learn your audience, competitors and KPIs — building the strategic foundation everything
+            else is built on. Your goals become our blueprint.</p>
           <div class="p-step-icon"><i data-lucide="compass"></i></div>
         </div>
         <div class="p-step reveal d1">
           <div class="p-num">02</div>
-          <div class="p-name">Strategy</div>
-          <p class="p-desc">We determine what needs to be said, built and promoted to move your audience toward
-            action.</p>
+          <div class="p-name">Strategy &amp; Visual Direction</div>
+          <p class="p-desc">Clear plan to convert visitors. We define the visual language and motion style so the design
+            communicates your offer instantly — without confusion.</p>
           <div class="p-step-icon"><i data-lucide="palette"></i></div>
         </div>
         <div class="p-step reveal d2">
           <div class="p-num">03</div>
-          <div class="p-name">Create</div>
-          <p class="p-desc">Design, copy, development, AI production and marketing come together.</p>
+          <div class="p-name">Design &amp; Build</div>
+          <p class="p-desc">Delivered in 3–6 weeks. Pixel-perfect execution across every touchpoint — web design,
+            motion, visual communication, all in one seamless delivery.</p>
           <div class="p-step-icon"><i data-lucide="code-2"></i></div>
         </div>
         <div class="p-step reveal d3">
           <div class="p-num">04</div>
-          <div class="p-name">Launch</div>
-          <p class="p-desc">Your website, commercial or campaign goes live.</p>
+          <div class="p-name">Launch &amp; Optimize</div>
+          <p class="p-desc">Go live and attract customers. Ongoing improvements and support to keep your brand growing
+            long after launch day.</p>
           <div class="p-step-icon"><i data-lucide="rocket"></i></div>
-        </div>
-        <div class="p-step reveal d1">
-          <div class="p-num">05</div>
-          <div class="p-name">Improve</div>
-          <p class="p-desc">We look at what is working and identify opportunities to make it better.</p>
-          <div class="p-step-icon"><i data-lucide="trending-up"></i></div>
         </div>
       </div>
     </div>
@@ -5500,18 +5014,18 @@
             </div>
           </div>
           <div class="faq-a">
-            <div class="faq-a-inner">Your goals and a rough budget or timeline. I'll handle strategy, design,
-              development, and marketing — with or without existing brand assets.</div>
+            <div class="faq-a-inner">Your goals and a rough budget or timeline. I'll handle strategy, design, motion,
+              and build — with or without existing brand assets.</div>
           </div>
         </div>
         <div class="faq-item reveal d3">
-          <div class="faq-q">Can I get just a commercial or ad campaign without a website?<div class="faq-icon"><i
+          <div class="faq-q">Can I get just a motion graphics video without a website?<div class="faq-icon"><i
                 data-lucide="plus"></i></div>
           </div>
           <div class="faq-a">
-            <div class="faq-a-inner">Absolutely. AI commercials and performance marketing can be scoped as
-              standalone projects — explainer videos, social ad creatives, and product commercials can all be
-              delivered independently of a web project.</div>
+            <div class="faq-a-inner">Absolutely. Motion graphics can be scoped as a standalone project — explainer
+              videos, social promo content, logo animations, and product demos can all be delivered independently of a
+              web project.</div>
           </div>
         </div>
         <div class="faq-item reveal">
@@ -5529,117 +5043,12 @@
           </div>
           <div class="faq-a">
             <div class="faq-a-inner">I've seen too many agencies sell "aesthetics" and call it strategy. I combine
-              design, AI production, and marketing under one roof, with a sharp focus on conversion — not just looks.
-              You get someone who understands communication strategy, not just decoration, and who stays invested
-              after launch, not just until invoice.</div>
+              design and motion under one roof, with a sharp focus on conversion — not just looks. You get someone who
+              understands communication strategy, not just decoration, and who stays invested after launch, not just
+              until invoice.</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="about-inner">
-      <div class="about-img-wrap reveal">
-        <div class="about-img-card">
-          <div class="about-img-placeholder">
-            <img src="./brandie-creative.png" width="100%" alt="Abdurahmon — Brandie Creative" onerror="this.style.display='none'" />
-            <div class="about-initials" style="display:none" id="initials-fallback">A</div>
-          </div>
-        </div>
-        <div class="about-tag">
-          <div class="about-tag-label">Years Active</div>
-          <div class="about-tag-val">5+ Years<br>of Excellence</div>
-        </div>
-      </div>
-      <div class="about-content">
-        <div class="sec-label reveal">About</div>
-        <h2 class="sec-title reveal d1">Good businesses<br>deserve good digital<br>experiences.</h2>
-        <p class="about-intro reveal d2">
-          I'm <strong>Abdurahmon</strong>, the creative behind Brandie Creative.
-        </p>
-        <p class="about-intro reveal d2" style="margin-top:-.6rem">
-          I work at the intersection of <strong>marketing, design, technology and storytelling</strong> to help
-          businesses communicate their value better online.
-        </p>
-        <p class="about-intro reveal d2" style="margin-top:-.6rem">
-          I started Brandie Creative because I saw too many businesses with genuinely good products and services
-          being held back by weak websites, unclear messaging and forgettable content.
-        </p>
-        <div class="about-goal reveal d3">
-          <div class="about-goal-label">My goal is simple</div>
-          <p>Make good businesses easier to notice, understand and choose.</p>
-        </div>
-        <div class="about-sig reveal d3">Brandie Creative — Available Worldwide</div>
-        <div class="hero-actions reveal d3" style="margin-top:2rem">
-          <a href="https://calendly.com/brandiecreative" target="_blank" class="btn-red morph-btn"><span
-              class="morph-text">Book a Free Call</span><span class="morph-icon"><i
-                data-lucide="calendar"></i></span></a>
-          <a href="#contact" class="btn-ghost morph-btn"><span class="morph-text">Get in Touch</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RESULTS / PROOF -->
-  <section id="proof">
-    <div class="sec-label">Results</div>
-    <h2 class="sec-title reveal">Don't take<br>our word for it.</h2>
-    <p class="sec-sub reveal d1">Real problems, real work, real numbers — from brands we've helped move from
-      attention to action.</p>
-    <div class="proof-grid">
-      <div class="proof-card reveal">
-        <div class="proof-client">Mavenmint Academy</div>
-        <div class="proof-cat">Web Development</div>
-        <div class="proof-row">
-          <div class="proof-row-label">The Problem</div>
-          <p>Course signups needed a clearer path from interest to enrollment.</p>
-        </div>
-        <div class="proof-row">
-          <div class="proof-row-label">The Solution</div>
-          <p>A conversion-focused website rebuild with clearer messaging and a streamlined enrollment flow.</p>
-        </div>
-        <div class="proof-row result">
-          <div class="proof-row-label">The Result</div>
-          <p>+42% course signups in 6 weeks.</p>
-        </div>
-      </div>
-      <div class="proof-card reveal d1">
-        <div class="proof-client">Femi Maven</div>
-        <div class="proof-cat">Web Development</div>
-        <div class="proof-row">
-          <div class="proof-row-label">The Problem</div>
-          <p>Slow load times and unclear messaging were costing engagement.</p>
-        </div>
-        <div class="proof-row">
-          <div class="proof-row-label">The Solution</div>
-          <p>A faster, clearer site rebuilt around a simpler message.</p>
-        </div>
-        <div class="proof-row result">
-          <div class="proof-row-label">The Result</div>
-          <p>Faster load and clearer messaging — +30% engagement.</p>
-        </div>
-      </div>
-      <div class="proof-card reveal d2">
-        <div class="proof-client">SOQ Legal</div>
-        <div class="proof-cat">Web Development</div>
-        <div class="proof-row">
-          <div class="proof-row-label">The Problem</div>
-          <p>The website wasn't reflecting the credibility of the firm.</p>
-        </div>
-        <div class="proof-row">
-          <div class="proof-row-label">The Solution</div>
-          <p>A clean, professional website built to establish trust fast.</p>
-        </div>
-        <div class="proof-row result">
-          <div class="proof-row-label">The Result</div>
-          <p>Improved credibility — more client enquiries.</p>
-        </div>
-      </div>
-    </div>
-    <div class="proof-cta-row reveal">
-      <a href="#portfolio" class="btn-ghost morph-btn"><span class="morph-text">View Case Studies</span></a>
     </div>
   </section>
 
@@ -5728,22 +5137,21 @@
   <section id="cta">
     <div class="cta-ticket reveal">
       <div class="cta-main">
-        <div class="cta-eyebrow"><i data-lucide="message-circle"></i>Let's Talk</div>
-        <h2 class="cta-h">Ready to turn<br><em>attention into customers?</em></h2>
-        <p class="cta-sub">Tell us what you're building, where you're stuck and what you want to achieve. We'll
-          figure out what needs to happen next.</p>
+        <div class="cta-eyebrow"><i data-lucide="clock"></i>Limited spots this quarter</div>
+        <h2 class="cta-h">Ready to<br><em>Grow Faster?</em></h2>
+        <p class="cta-sub">We take on a select number of campaigns and website launches each quarter. If you want
+          more leads, more clarity, and faster growth — let's talk.</p>
 
         <div class="cta-chips">
-          <div class="cta-chip"><i data-lucide="check"></i>No complicated process</div>
-          <div class="cta-chip"><i data-lucide="check"></i>No unnecessary jargon</div>
-          <div class="cta-chip"><i data-lucide="check"></i>Just a clear conversation</div>
+          <div class="cta-chip"><i data-lucide="check"></i>Free 20-minute discovery</div>
+          <div class="cta-chip"><i data-lucide="check"></i>Clear timeline &amp; pricing</div>
+          <div class="cta-chip"><i data-lucide="check"></i>No-obligation proposal</div>
         </div>
 
         <div class="cta-buttons">
-          <a href="#contact" class="btn-red morph-btn"><span class="morph-text">Start a Project</span><span
-              class="morph-icon" aria-hidden="true">↗</span></a>
-          <a href="https://calendly.com/brandiecreative" target="_blank" class="btn-ghost morph-btn"><span
-              class="morph-text">Book a Free Call</span></a>
+          <a href="https://calendly.com/brandiecreative" target="_blank" class="btn-red morph-btn"><span
+              class="morph-text">Book a Free Call</span><span class="morph-icon" aria-hidden="true">↗</span></a>
+          <a href="#contact" class="btn-ghost morph-btn"><span class="morph-text">Start Your Project</span></a>
         </div>
 
         <div class="cta-alt">Prefer messaging? <a
@@ -5751,10 +5159,64 @@
           or <a href="mailto:brandiecreative@gmail.com">email</a>.</div>
       </div>
       <div class="cta-stub">
-        <div class="cta-stub-icon"><i data-lucide="sparkles"></i></div>
-        <div class="cta-stub-eyebrow">What to Expect</div>
-        <div class="cta-stub-big">No Jargon.<br>Just Clarity.</div>
-        <div class="cta-stub-foot">Response within 24 hours</div>
+        <div class="cta-stub-icon"><i data-lucide="calendar-clock"></i></div>
+        <div class="cta-stub-eyebrow">This Quarter</div>
+        <div class="cta-stub-big">Limited<br>Availability</div>
+        <div class="cta-stub-foot">Applications reviewed<br>within 24 hours</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-card">
+          <div class="about-img-placeholder">
+            <img src="./brandie-creative.png" width="100%" alt="Brandie Creative" onerror="this.style.display='none'" />
+            <div class="about-initials" style="display:none" id="initials-fallback">BC</div>
+          </div>
+        </div>
+        <div class="about-tag">
+          <div class="about-tag-label">Years Active</div>
+          <div class="about-tag-val">5+ Years<br>of Excellence</div>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="sec-label reveal">The Person Behind It</div>
+        <h2 class="sec-title reveal d1">Marketing that<br>Converts.</h2>
+        <p class="about-intro reveal d2">
+          Hi, I'm <strong>Brandie</strong>.
+        </p>
+        <p class="about-intro reveal d2" style="margin-top:-.6rem">
+          I didn't set out to build an agency. I just kept getting asked by founders in my circle to fix their
+          sites — the messaging was muddled, the design didn't match the quality of the work behind it, or the site
+          just didn't convert. "Can you help me with mine?" became a pattern, and eventually the pattern became a
+          business.
+        </p>
+        <p class="about-intro reveal d2" style="margin-top:-.6rem">
+          I work with <strong>startups, founders, e-commerce brands, and service businesses</strong> to build digital
+          systems that attract, engage, and convert — using strategy, creative, motion, and performance marketing.
+          Not because I want to sell you a funnel you don't need, but because I'm tired of watching good work lose to
+          bad presentation.
+        </p>
+        <div class="about-values reveal d3">
+          <div class="about-val"><i data-lucide="arrow-right"></i>Your expertise deserves a digital presence that proves
+            it</div>
+          <div class="about-val"><i data-lucide="arrow-right"></i>Clear visual communication converts better than clever
+            tricks</div>
+          <div class="about-val"><i data-lucide="arrow-right"></i>Motion graphics are the fastest way to build trust
+            online</div>
+          <div class="about-val"><i data-lucide="arrow-right"></i>Minimalist design paired with strategic clarity =
+            premium brand</div>
+        </div>
+        <div class="about-sig reveal d3">Brandie Creative — Available Worldwide</div>
+        <div class="hero-actions reveal d3" style="margin-top:2rem">
+          <a href="https://calendly.com/brandiecreative" target="_blank" class="btn-red morph-btn"><span
+              class="morph-text">Book a Free Call</span><span class="morph-icon"><i
+                data-lucide="calendar"></i></span></a>
+          <a href="#contact" class="btn-ghost morph-btn"><span class="morph-text">Get in Touch</span></a>
+        </div>
       </div>
     </div>
   </section>
@@ -5832,10 +5294,9 @@
             <label for="f-service">Service Needed</label>
             <select id="f-service" name="service" required>
               <option value="" disabled selected>Select a service…</option>
-              <option>Conversion Website</option>
-              <option>AI Commercial</option>
-              <option>Performance Marketing</option>
-              <option>SEO &amp; Organic Growth</option>
+              <option>Motion Graphics</option>
+              <option>High-Converting Website</option>
+              <option>Both</option>
               <option>Not sure yet — let's talk</option>
             </select>
           </div>
@@ -5899,8 +5360,8 @@
       <div class="footer-top">
         <div class="footer-brand-col">
           <a href="#" class="f-logo">Brandie Creative<em>.</em></a>
-          <p class="footer-tagline">Digital growth &amp; creative studio — websites, AI commercials, performance
-            marketing and SEO for ambitious brands.</p>
+          <p class="footer-tagline">Digital marketing services, conversion websites, and growth strategy for ambitious
+            brands.</p>
           <div class="footer-social">
             <a href="#" class="social-btn" aria-label="Instagram">
               <svg viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.7" stroke-linecap="round"
@@ -5938,10 +5399,10 @@
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Services</div>
-          <a href="#services">Conversion Websites</a>
-          <a href="#services">AI Commercials</a>
-          <a href="#services">Performance Marketing</a>
-          <a href="#services">SEO &amp; Organic Growth</a>
+          <a href="#services">Motion Graphics</a>
+          <a href="#services">Website Design</a>
+          <a href="#services">Visual Communication</a>
+          <a href="#services">SEO &amp; Performance</a>
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Company</div>
@@ -6036,7 +5497,7 @@
       }
 
       /* ── TICKER ── */
-      var tItems = ['AI Commercials', 'Conversion Websites', 'Performance Marketing', 'SEO & Organic Growth', 'Meta Ads', 'E-commerce Sites', 'Landing Pages', 'Social Ad Creatives'];
+      var tItems = ['Motion Graphics', 'High-Converting Websites', 'Visual Communication', 'SEO & Performance', 'Startup Branding', 'Freelancer Sites', 'Landing Pages', 'Social Content'];
       var tEl = document.getElementById('ticker');
       if (tEl) {
         tEl.innerHTML = [].concat(tItems, tItems, tItems, tItems).map(function (s) {
@@ -6045,7 +5506,7 @@
       }
 
       /* ── MARQUEE ── */
-      var mItems = ['Conversion Websites', 'AI Commercials', 'Performance Marketing', 'SEO & Growth', 'Attention Into Customers', 'Brandie Creative'];
+      var mItems = ['Premium Design', 'Motion Graphics', 'High Conversion', 'Startups & Freelancers', 'Results Driven', 'Brandie Creative'];
       var mEl = document.getElementById('marquee');
       if (mEl) {
         var mHtml = [].concat(mItems, mItems).map(function (s, i) {
