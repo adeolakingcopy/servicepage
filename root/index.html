@@ -2147,7 +2147,11 @@
     #portfolio {
       padding: 9rem 3.5rem;
       position: relative;
-      z-index: 2
+      z-index: 2;
+      /* background-image: url('./animo-ticker-loop-1080p.gif'); */
+      repeat: no-repeat;
+      background-size: cover;
+  
     }
 
     .port-inner {
@@ -2458,6 +2462,14 @@
       transform: rotate(2.2deg);
       z-index: 1;
       box-shadow: 0 15px 40px rgba(0, 0, 0, .35);
+    }
+
+    .work-card.pos-3 {
+      left: 30%;
+      top: 27%;
+      transform: rotate(-1.5deg);
+      z-index: 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
     }
 
     .work-card:focus-visible {
@@ -5070,7 +5082,7 @@
   <!-- SERVICES -->
   <section id="services">
     <div class="sec-label">Services</div>
-    <h2 class="sec-title reveal">Everything your brand<br>needs to turn attention<br>into action.</h2>
+    <h2 class="sec-title reveal">Everything your brand<br>needs to turn attention<br>into convertion.</h2>
     <div class="svc-grid">
       <div class="svc reveal">
         <div class="svc-num">01</div>
@@ -5223,7 +5235,8 @@
   <!-- WHY BRANDIE -->
   <section id="why">
     <div class="sec-label">Why Brandie</div>
-    <h2 class="sec-title reveal">Creative that<br>understands business.</h2>
+    <h2 class="sec-title reveal">Marketing that <br>
+Converts.</h2>
     <p class="why-text reveal d1">We're not interested in making things look good for the sake of looking good.</p>
     <p class="why-text reveal d2">Every website, commercial and campaign starts with a simple question:</p>
     <p class="why-question reveal d3">What should this make the customer do?</p>
@@ -5280,12 +5293,25 @@
                 aria-label="Visit SOQ Legal site"><i data-lucide="arrow-up-right"></i></a>
             </div>
           </div>
+          <div class="work-card port-card pos-3" tabindex="0" role="button" aria-label="hibro-ng.com — bring to front">
+            <img src="./Macbook-Air-hibro-ng.com.webp" alt="hibro-ng.com website" loading="lazy" />
+            <div class="work-card-peek">04</div>
+            <div class="work-card-tab">
+              <div>
+                <div class="work-card-cat">Web Development</div>
+                <div class="work-card-title">hibro-ng.com</div>
+                <div class="work-card-result"></div>
+              </div>
+              <a href="https://hibro-ng.com/" target="_blank" rel="noopener noreferrer" class="work-card-link"
+                aria-label="Visit hibro-ng.com site"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
         </div>
         <div class="work-stack-hint"><i data-lucide="mouse-pointer-click"></i>Click a peeking corner to bring it
           forward</div>
       </div>
 
-      <div class="work-more-label">More — Motion Graphics</div>
+      <!-- <div class="work-more-label">More — Motion Graphics</div>
       <div class="work-mini-grid">
         <div class="port-card reveal">
           <div class="port-visual">
@@ -5364,7 +5390,7 @@
           <div class="port-arrow"><i data-lucide="arrow-up-right"></i></div>
         </div>
 
-      </div>
+      </div> -->
       <div class="port-cta-row reveal">
         <a href="#contact" class="btn-ghost morph-btn"><span class="morph-text">View Our Work</span></a>
       </div>
@@ -6060,11 +6086,11 @@
       if (wStack) {
         var wCards = Array.prototype.slice.call(wStack.querySelectorAll('.work-card'));
         var wOrder = wCards.map(function (_, i) { return i; });
-        var wPosClasses = ['pos-0', 'pos-1', 'pos-2'];
+        var wPosClasses = ['pos-0', 'pos-1', 'pos-2', 'pos-3'];
         function renderStack() {
           wOrder.forEach(function (cardIndex, pos) {
             var card = wCards[cardIndex];
-            card.classList.remove('pos-0', 'pos-1', 'pos-2');
+            card.classList.remove('pos-0', 'pos-1', 'pos-2', 'pos-3');
             card.classList.add(wPosClasses[pos] || wPosClasses[wPosClasses.length - 1]);
             card.classList.toggle('is-front', pos === 0);
           });
