@@ -9,7 +9,7 @@
     "author": "Brandie Creative",
     "featured": true,
     "metric": { "label": "Signups", "value": "+42%", "trend": [4, 6, 5, 9, 12, 18, 24] },
-    "image": "https://brandiecreative.netlify.app/Macbook-Air-join.mavenmint.io%20(1).webp",
+    "image": "https://brandiecreative.com/Macbook-Air-join.mavenmint.io%20(1).webp",
     "content": [
       { "type": "p", "text": "Mavenmint came to us with a familiar problem: decent traffic, forgettable results. Visitors were landing on the homepage, scrolling once, and leaving. The site looked fine. It just wasn't doing a job." },
       { "type": "h2", "text": "The audit: three things nobody was saying" },
@@ -33,7 +33,7 @@
     "author": "Brandie Creative",
     "featured": false,
     "metric": { "label": "Engagement", "value": "+30%", "trend": [10, 11, 9, 14, 17, 19, 22] },
-    "image": "https://brandiecreative.netlify.app/Macbook-Air-femimaven.netlify.app.webp",
+    "image": "https://brandiecreative.com/Macbook-Air-femimaven.com.webp",
     "content": [
       { "type": "p", "text": "Femi Maven's site had a beautiful design problem: it was heavy. Full-bleed imagery, uncompressed video backgrounds, and web fonts loading in sequence rather than in parallel. On a fast connection it looked great. On anything else, people bailed before the page finished painting." },
       { "type": "h2", "text": "What we measured" },
@@ -79,7 +79,7 @@
     "author": "Brandie Creative",
     "featured": false,
     "metric": null,
-    "image": "https://brandiecreative.netlify.app/Macbook-Air-soqlegal.com.webp",
+    "image": "https://brandiecreative.com/Macbook-Air-soqlegal.com.webp",
     "content": [
       { "type": "p", "text": "Nobody hires a law firm off a hunch. Before a visitor reads a single word of copy on a legal site, they're scanning for signals: does this look real, does this look current, does this look like a firm that wins cases. SOQ Legal's old site was answering none of those questions in the first six seconds." },
       { "type": "h2", "text": "Credibility signals, in order" },
