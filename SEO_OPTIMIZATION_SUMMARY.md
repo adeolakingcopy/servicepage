@@ -29,7 +29,7 @@ The Brandie Creative website (`brandie/index.html`) has been comprehensively opt
 - **Viewport**: Responsive design optimization
 - **Robots**: index, follow (allows crawling and indexing)
 - **Revisit-After**: 14 days
-- **Canonical URL**: https://brandiecreative.netlify.app
+- **Canonical URL**: https://brandiecreative.com
 - **Alternate Mobile Link**: Includes mobile-specific alternate URL
 
 ---
@@ -39,10 +39,10 @@ The Brandie Creative website (`brandie/index.html`) has been comprehensively opt
 ### Implemented Tags
 ```html
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://brandiecreative.netlify.app">
+<meta property="og:url" content="https://brandiecreative.com">
 <meta property="og:title" content="Brandie Creative - Web Design, SEO & Digital Marketing Services">
 <meta property="og:description" content="Boost your online presence with expert web design, SEO optimization, and digital marketing strategies...">
-<meta property="og:image" content="https://brandiecreative.netlify.app/og-image.jpg">
+<meta property="og:image" content="https://brandiecreative.com/og-image.jpg">
 <meta property="og:site_name" content="Brandie Creative">
 <meta property="og:locale" content="en_US">
 ```
@@ -60,10 +60,10 @@ The Brandie Creative website (`brandie/index.html`) has been comprehensively opt
 ### Implemented Tags
 ```html
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://brandiecreative.netlify.app">
+<meta name="twitter:url" content="https://brandiecreative.com">
 <meta name="twitter:title" content="Brandie Creative - Web Design, SEO & Digital Marketing Services">
 <meta name="twitter:description" content="Boost your online presence...">
-<meta name="twitter:image" content="https://brandiecreative.netlify.app/og-image.jpg">
+<meta name="twitter:image" content="https://brandiecreative.com/og-image.jpg">
 ```
 
 **Benefits**:
@@ -85,8 +85,8 @@ The Brandie Creative website (`brandie/index.html`) has been comprehensively opt
   "@type": "Person",
   "name": "Brandie Creative",
   "jobTitle": "Full-Stack Digital Marketer, Web Developer & Creative Director",
-  "url": "https://brandiecreative.netlify.app",
-  "image": "https://brandiecreative.netlify.app/brandie-creative.png",
+  "url": "https://brandiecreative.com",
+  "image": "https://brandiecreative.com/brandie-creative.png",
   "email": "brandiecreative@gmail.com",
   "sameAs": ["https://linkedin.com/in/brandie", "https://instagram.com/brandiecreative/", "https://twitter.com/brandiecreative"],
   "knowsAbout": ["Web Development", "SEO", "Digital Marketing", "Branding", "Motion Graphics"]
@@ -106,7 +106,7 @@ The Brandie Creative website (`brandie/index.html`) has been comprehensively opt
   "@type": "LocalBusiness",
   "name": "Brandie Creative",
   "description": "Full-stack digital marketing and web development agency",
-  "url": "https://brandiecreative.netlify.app",
+  "url": "https://brandiecreative.com",
   "telephone": "",
   "email": "brandiecreative@gmail.com",
   "address": {
@@ -153,8 +153,8 @@ The Brandie Creative website (`brandie/index.html`) has been comprehensively opt
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Brandie Creative",
-  "url": "https://brandiecreative.netlify.app",
-  "logo": "https://brandiecreative.netlify.app/logo.png",
+  "url": "https://brandiecreative.com",
+  "logo": "https://brandiecreative.com/logo.png",
   "description": "Full-stack digital marketing, web development, and branding services",
   "sameAs": [
     "https://linkedin.com/in/brandie",
@@ -185,25 +185,25 @@ The Brandie Creative website (`brandie/index.html`) has been comprehensively opt
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://brandiecreative.netlify.app"
+      "item": "https://brandiecreative.com"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Services",
-      "item": "https://brandiecreative.netlify.app#services"
+      "item": "https://brandiecreative.com#services"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Process",
-      "item": "https://brandiecreative.netlify.app#process"
+      "item": "https://brandiecreative.com#process"
     },
     {
       "@type": "ListItem",
       "position": 4,
       "name": "Contact",
-      "item": "https://brandiecreative.netlify.app#contact"
+      "item": "https://brandiecreative.com#contact"
     }
   ]
 }
