@@ -5127,7 +5127,7 @@
         <div class="svc-icon-wrap"><i data-lucide="target"></i></div>
         <div class="svc-name">Performance Marketing</div>
         <p class="svc-hook">Put your offer in front of the people most likely to buy.</p>
-        <p class="svc-desc">We create and optimize paid campaigns around measurable objectives — whether that's
+        <p class="svc-desc">We create and optimize paid campaigns around measurable objectives  whether that's
           generating leads, driving sales or getting more qualified people into your funnel.</p>
         <div class="svc-do-label">What we do</div>
         <div class="svc-do-list">
@@ -5429,6 +5429,11 @@
           <div class="who-title">Growing Businesses</div>
           <p class="who-desc">Upgrade your digital presence and create a stronger growth system.</p>
         </div>
+        <div class="who-card reveal d2">
+          <div class="who-icon-wrap"><i data-lucide="sparkles"></i></div>
+          <div class="who-title">Founders &amp; Entrepreneurs</div>
+          <p class="who-desc">Turn expertise into a stronger brand story and a clearer path to conversion.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -5610,7 +5615,7 @@
   </section>
 
   <!-- RESULTS / PROOF -->
-  <section id="proof">
+  <!-- <section id="proof">
     <div class="sec-label">Results</div>
     <h2 class="sec-title reveal">Don't take<br>our word for it.</h2>
     <p class="sec-sub reveal d1">Real problems, real work, real numbers from brands we've helped move from
@@ -5668,7 +5673,7 @@
     <div class="proof-cta-row reveal">
       <a href="#portfolio" class="btn-ghost morph-btn"><span class="morph-text">View Case Studies</span></a>
     </div>
-  </section>
+  </section> -->
 
   <!-- TESTIMONIALS -->
   <section id="testimonials">
@@ -5844,7 +5849,7 @@
         </div>
       </div>
       <div>
-        <form class="contact-form" id="contact-form" novalidate>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mnpqnwrb" method="POST" novalidate>
           <div class="form-row">
             <div class="form-group">
               <label for="f-name">Full Name</label>
@@ -5893,6 +5898,8 @@
             <textarea id="f-msg" name="message" rows="5"
               placeholder="What are you building, who is it for, and what outcome do you want?"></textarea>
           </div>
+          <input type="hidden" name="_subject" value="New project inquiry from Brandie Creative website">
+          <input type="hidden" name="_captcha" value="false">
           <button type="submit" class="form-submit morph-btn">
             <span class="morph-text">Send Message</span><span class="morph-icon"><i data-lucide="send"></i></span>
           </button>
@@ -6215,12 +6222,49 @@
       if (cf) {
         cf.addEventListener('submit', function (e) {
           e.preventDefault();
+
+          if (!cf.checkValidity()) {
+            cf.reportValidity();
+            return;
+          }
+
           var btn = cf.querySelector('.form-submit');
-          if (btn) { btn.innerHTML = '<span>Sending…</span>'; btn.disabled = true; }
-          setTimeout(function () {
-            cf.style.display = 'none';
-            if (fs) fs.classList.add('show');
-          }, 1400);
+          var originalButton = btn ? btn.innerHTML : '';
+
+          if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = '<span>Sending…</span>';
+          }
+
+          fetch(cf.action, {
+            method: 'POST',
+            body: new FormData(cf),
+            headers: { 'Accept': 'application/json' }
+          })
+            .then(function (response) {
+              if (!response.ok) throw new Error('Formspree request failed');
+              return response.json().catch(function () { return {}; });
+            })
+            .then(function () {
+              cf.style.display = 'none';
+              if (fs) fs.classList.add('show');
+            })
+            .catch(function () {
+              if (btn) {
+                btn.disabled = false;
+                btn.innerHTML = originalButton;
+              }
+
+              var formError = cf.querySelector('.form-error');
+              if (!formError) {
+                formError = document.createElement('p');
+                formError.className = 'form-error';
+                formError.style.color = '#ff8a80';
+                formError.style.marginTop = '1rem';
+                formError.textContent = 'Something went wrong while sending your message. Please try again or contact us via WhatsApp.';
+                cf.appendChild(formError);
+              }
+            });
         });
       }
 
