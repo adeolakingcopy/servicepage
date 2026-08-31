@@ -1,2 +1,8 @@
 [build]
   publish = "root"
+
+[[redirects]]
+  from = "https://brandiecreative.netlify.app/*"
+  to = "https://brandiecreative.com/:splat"
+  status = 301
+  force = true
