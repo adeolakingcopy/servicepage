@@ -1,0 +1,49 @@
+{
+    "website_name": "Brandie Creative",
+    "website_url": "https://brandiecreative.com/",
+    "ai_access_policy": "fully_open",
+    "allow_training": true,
+    "allow_indexing": true,
+    "allow_crawling": true,
+    "allow_snippet_generation": true,
+    "attribution_required": true,
+    "preferred_attribution": {
+        "name": "Brandie Creative",
+        "url": "https://brandiecreative.com/"
+    },
+    "content_types_allowed": [
+        "text",
+        "images",
+        "metadata",
+        "structured_data",
+        "schema_org"
+    ],
+    "restricted_paths": [
+        "/dev/",
+        "/netlify/",
+        "/.git/",
+        "/.vscode/"
+    ],
+    "contact": {
+        "email": "brandiecreative@gmail.com",
+        "inquiry_url": "https://brandiecreative.com/#contact"
+    },
+    "supported_ai_platforms": [
+        "openai",
+        "anthropic",
+        "google",
+        "microsoft",
+        "meta",
+        "perplexity",
+        "all_major_ai_platforms"
+    ],
+    "schema_org_support": [
+        "Organization",
+        "LocalBusiness",
+        "Service",
+        "Person",
+        "BreadcrumbList",
+        "WebSite"
+    ],
+    "last_updated": "2026-08-31"
+}
